@@ -24,3 +24,19 @@ function App() {
 }
 
 export default App;
+
+//***********************************Code below from example activity****************************
+// import React from "react";
+// import Books from "./pages/Books";
+// import Nav from "./components/Nav";
+
+// function App() {
+//   return (
+//     <div>
+//       <Nav />
+//       <Books />
+//     </div>
+//   );
+// }
+
+// export default App;
