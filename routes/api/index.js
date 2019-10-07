@@ -1,8 +1,7 @@
-//*********************Example code below**************************** */
-// const router = require("express").Router();
-// const bookRoutes = require("./books");
+const router = require("express").Router();
+const petRoutes = require("./pets");
 
-// // Book routes
-// router.use("/books", bookRoutes);
+// Pet routes
+router.use("/pets", petRoutes);
 
-// module.exports = router;
+module.exports = router;

@@ -1,0 +1,27 @@
+{
+  "name": "pet-2-person",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "dependencies": {
+    "mongoose": "^5.7.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "^3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarah-Lopez/Pet-2-Person.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sarah-Lopez/Pet-2-Person/issues"
+  },
+  "homepage": "https://github.com/Sarah-Lopez/Pet-2-Person#readme"
+}

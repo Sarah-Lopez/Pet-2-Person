@@ -18,7 +18,7 @@ app.use(routes);
 // Connect to the Mongo DB
 //*******************************************************change DB name below***********************************************************
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
+  process.env.MONGODB_URI || "mongodb://localhost/petslist"
 );
 
 // Start the API server
