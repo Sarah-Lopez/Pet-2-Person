@@ -1,5 +1,3 @@
-
-// //**********************Example activity code below*********************************
 const db = require("../models");
 
 // Defining methods for the petsController

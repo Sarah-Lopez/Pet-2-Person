@@ -8,9 +8,20 @@ router.route("/")
 
 // Matches with "/api/pets/:id"
 router
-  .route("/:id")
-  .get(petsController.findById)
+  .route("/species/:species")
+  .get(petsController.findBySpecies)
+  .get(petsController.findByName)
+  .get(petsController.findByType)
+  .get(petsController.findByGender)
+  .get(petsController.findByAge)
+  .get(petsController.findByBreed)
+  
   .put(petsController.update)
+
+
+  
   .delete(petsController.remove);
 
 module.exports = router;
+
+

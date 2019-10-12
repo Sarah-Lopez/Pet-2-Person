@@ -1,4 +1,3 @@
-//*************************Code below comes from example activity************* */
 import axios from "axios";
 
 export default {
@@ -6,17 +5,21 @@ export default {
   getPets: function() {
     return axios.get("/api/pets");
   },
-  // Gets the book with the given id
-  getPet: function(id) {
-    return axios.get("/api/pets/" + id);
+  // Gets the pet with the given id
+  getPet: function(species) {
+    return axios.get("/api/pets/species" + species);
   },
-  // Deletes the book with the given id
+  // Deletes the pet with the given id
   deletePet: function(id) {
     return axios.delete("/api/pets/" + id);
   },
-  // Saves a book to the database
+  // Saves a pet to the database
   savePet: function(petData) {
     return axios.post("/api/pets", petData);
   }
+
+  //Will push pets to favorites here.
+  //post
+
 };
 
