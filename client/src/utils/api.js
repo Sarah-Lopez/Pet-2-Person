@@ -1,4 +1,3 @@
-//*************************Code below comes from example activity************* */
 import axios from "axios";
 
 export default {
@@ -18,5 +17,7 @@ export default {
   savePet: function(petData) {
     return axios.post("/api/pets", petData);
   }
+
+  //Will push pets to favorites here.
 };
 

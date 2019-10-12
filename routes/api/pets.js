@@ -10,6 +10,13 @@ router.route("/")
 router
   .route("/:id")
   .get(petsController.findById)
+
+  .get(petsController.findByName)
+  .get(petsController.findByType)
+  .get(petsController.findByGender)
+  .get(petsController.findByAge)
+  .get(petsController.findByBreed)
+  
   .put(petsController.update)
   .delete(petsController.remove);
 
