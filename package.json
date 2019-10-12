@@ -1,31 +1,37 @@
 {
-  "name": "pet-2-person",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
-  },
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "axios": "^0.18.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.1.0",
+    "express": "^4.16.3",
+    "express-session": "^1.17.0",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.16",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-static": "^1.14.1",
+    "superagent": "^5.1.0",
+    "superagent-use": "^0.1.0"
   }
 }
