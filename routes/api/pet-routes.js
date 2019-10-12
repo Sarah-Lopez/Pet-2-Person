@@ -13,10 +13,6 @@ module.exports = function(app) {
     if (req.query.author_id) {
       query.AuthorId = req.query.author_id;
     }*/
-    console.log("hello");
-    
-    db("dog", 85326, "male")
-    console.log(res);
     
   });
 

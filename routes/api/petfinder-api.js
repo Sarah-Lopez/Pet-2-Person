@@ -4,13 +4,13 @@ const queryURL = "https://api.petfinder.com/v2/oauth2/token"
 const URL = "https://api.petfinder.com/v2/animals"
 const key = process.env.CLIENT_ID
 const secret = process.env.CLIENT_SECRET
-const request = require('superagent-use')(require('superagent'));
+// const request = require('superagent-use')(require('superagent'));
 // const token = require("./token");
 
 const type = "dog";
 const zip = 85326;
 const gender = "male";
-// let token1;
+var token1;
 
 /*
  console.log(token.tokenCall());
@@ -59,28 +59,32 @@ const apiCall = token => {
     };
     console.log("req");
     return req;
-  }); */
+  }); 
 
   const instance = axios.create({
     baseURL: URL,
     timeout: 1000,
     headers: {"Authorization" : 'Bearer ' + token1}
-  });
-}
+  }); */
   
   axios({
-    baseurl: URL,
-    method: 'get'
-  }).then(function(Kresponse) {
-    console.log("It worked! 200")
+    url: URL,
+    method: 'get',
+    headers: {"Authorization" : 'Bearer ' + token}
+  }).then(function(response) {
+    console.log("API Call: It worked! 200")
+    // console.log(response)
+    return response
   })
   .catch(function (error) {
-      console.log("Oops! Error")
-      // console.log(error)
-   })
+    console.log("API Call Error")
+    // console.log(error)
+  })
   .finally(function () {
-     
-   });
+    
+  });
+  // return axios;
+}
    /*
   request.get(URL)
       .query({ 
@@ -102,7 +106,7 @@ const apiCall = token => {
 
 
 axios({
-  baseurl: queryURL,
+  url: queryURL,
   data: {
       grant_type: "client_credentials",
       client_id: key,
@@ -112,7 +116,7 @@ axios({
 }).then(function (response) {
       token1 = response.data.access_token;
       expiresIn = response.expires_in;
-      console.log("200 Success!")
+      console.log("Token 200 Success!")
       // console.log("Token1: " + token1);
       apiCall(token1);
       // return token1
@@ -120,7 +124,7 @@ axios({
       //callback(token1);
   })
   .catch(function (error) {
-      console.log("Oops! Something went wrong! Error")
+      console.log("Token Error")
       // console.log(error)
    })
   .finally(function () {
@@ -128,3 +132,4 @@ axios({
    });
 
 
+// console.log(axios.then());
