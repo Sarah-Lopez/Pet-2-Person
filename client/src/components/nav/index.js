@@ -12,12 +12,33 @@ function Nav() {
       <a className="navbar-brand" href="/cats">
         Cats
       </a>
-      {/* Grab all animal categories */}
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" href="smallnfurry">
         Small n' furry
+      </a>
+      <a className="navbar-brand" href="/rabbits">
+        Rabbits
+      </a>
+      <a className="navbar-brand" href="/birds">
+        Birds
+      </a>
+      <a className="navbar-brand" href="/scalesfinsother">
+        Scales, fins, other
+      </a>
+      <a className="navbar-brand" href="/horses">
+        Horses
+      </a>
+      <a className="navbar-brand" href="/barnyard">
+        Barnyard
+      </a>
+      <a className="navbar-brand" href="/favorites">
+        Favorites
+      </a>
+      <a className="navbar-brand" href="/login">
+        Login
       </a>
     </nav>
   );
 }
+
 
 export default Nav;
