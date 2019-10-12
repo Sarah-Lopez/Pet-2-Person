@@ -5,10 +5,10 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/favorites"
+  "mongodb://localhost/petslist"
 );
 
-const favorites = [
+const petSeed = [
   {
     name: "Snoopy",
     id: "00000001",
@@ -104,9 +104,42 @@ const favorites = [
 ];
 
 
+const userSeed = [
+  {
+    username: "Sarah",
+    password: "password",
+    roles: [
+        { role: 'readwrite', db: 'userSeed' }
+    ]
+  },
+  {
+    username: "Chaa'lissa",
+    password: "password",
+    roles: [
+        { role: 'readwrite', db: 'userSeed' }
+    ]
+  },
+  {
+    username: "Marco",
+    password: "password",
+    roles: [
+        { role: 'readwrite', db: 'userSeed' }
+    ]
+  },
+  {
+    username: "Nicole",
+    password: "password",
+    roles: [
+        { role: 'readwrite', db: 'userSeed' }
+    ]
+  }
+
+];
+
+
 db.Pet
   .remove({})
-  .then(() => db.Pet.collection.insertMany(favorites))
+  .then(() => db.Pet.collection.insertMany(petSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
@@ -115,3 +148,17 @@ db.Pet
     console.error(err);
     process.exit(1);
   });
+
+
+  db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+

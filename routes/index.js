@@ -1,4 +1,3 @@
-// //******************************Example code below************************** */
 const axios = require("axios");
 const path = require("path");
 const router = require("express").Router();

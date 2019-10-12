@@ -1,5 +1,6 @@
 
 module.exports = {
-    Pet: require("./pet")
+    Pet: require("./pet"),
+    User: require("./user")
   };
     
