@@ -15,22 +15,33 @@ class Navbar extends React.Component {
           <div>
             <ul className="navbar-nav">
                 <li className="nav-item nav-link">
-                  <Link to="/about"
+                  <Link to="/welcome"
                   className={
-                  window.location.pathname === "/" || window.location.pathname === "/about" 
+                  window.location.pathname === "/" || 
+                  window.location.pathname === "/welcome" 
                     ? "active" 
                     : "nav-link"}
-                  >About
+                  >Welcome
                   </Link>
                 </li>
                 
+
+                <li className="nav-item nav-link">
+                  <Link to="/about"
+                  className={window.location.pathname === "/about" ? "active" : "nav-link"}
+                  >
+                About</Link>
+                </li>
+                     
+
+
                 <li className="nav-item nav-link">
                   <Link to="/dogs"
                   className={window.location.pathname === "/dogs" ? "active" : "nav-link"}
                   >
                 Dogs</Link>
                 </li>
-
+                
 
                 <li className="nav-item nav-link">
                   <Link to="/cats"
@@ -80,6 +91,12 @@ class Navbar extends React.Component {
                     Scalesfinsother</Link>
                 </li>
                 
+                <li className="nav-item nav-link">
+                  <Link to="/welcome"
+                  className={window.location.pathname === "/welcome" ? "active" : "nav-link"}
+                  >                    
+                    Login</Link>
+                </li>
             
             </ul >
           </div >

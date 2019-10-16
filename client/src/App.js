@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
+import Welcome from "./pages/Welcome";
 import Dogs from "./pages/Dogs";
 import Cats from "./pages/Cats";
 import Barnyard from "./pages/Barnyard";
@@ -9,11 +10,10 @@ import Horses from "./pages/Horses";
 import Rabbits from "./pages/Rabbits";
 import Scalesfinsother from "./pages/Scalesfinsother";
 import Smallnfurry from "./pages/Smallnfurry";
-
-
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
       <div>
         <Navbar />
         <Switch>
+          <Route exact path="/welcome" component={Welcome} />
           <Wrapper>
             <Route exact path="/" component={About} />
             <Route exact path="/about" component={About} />
