@@ -1,7 +1,8 @@
 
 // Requiring our models
 const db = require("./petfinder-api");
-console.log(db);
+console.log("Pet Api Route");
+console.log(db.tokenCall());
 
 // Routes
 // =============================================================
