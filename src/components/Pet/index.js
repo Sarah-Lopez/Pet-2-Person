@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./pet.css";
 
 function Pet  (props) {
   return (
