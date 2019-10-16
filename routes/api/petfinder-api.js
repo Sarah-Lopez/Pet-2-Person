@@ -1,7 +1,5 @@
 
-const fetch = require('node-fetch');
 const axios = require('axios');
-fetch.Promise = axios;
 const queryURL = "https://api.petfinder.com/v2/oauth2/token"
 const URL = "https://api.petfinder.com/v2/animals"
 const key = process.env.CLIENT_ID
@@ -10,24 +8,25 @@ const secret = process.env.CLIENT_SECRET
 
 
 const apiCall = token => {
-  fetch('/api/pets', {
+  axios('/api/pets', {
     url: URL,
     method: 'get',
     headers: {"Authorization" : 'Bearer ' + token}
   }).then(res => {
-    res.json()
+    // res.json()
     console.log("API Call: It worked! 200")
-    // console.log(response)
+    // console.log(res.data.animals[0])
+    return res
   })
   .catch(error => {
     console.log("API Call Error")
     console.log(error)
   })
-  .then(json => console.log(json));
+  // .then(res => console.log(res.data));
   // return axios;
 }
 
-
+const tokenCall = () => {
 axios({
   url: queryURL,
   data: {
@@ -41,18 +40,27 @@ axios({
       expiresIn = response.expires_in;
       console.log("Token 200 Success!")
       // console.log("Token1: " + token1);
-      apiCall(token1);
+      return apiCall(token1);
       // return token1
       // console.log(response);
       //callback(token1);
   })
   .catch(function (error) {
       console.log("Token Error")
-      // console.log(error)
+      console.log(error)
    })
   .finally(function () {
      
    });
-
-  //  console.log(apiCall);
+  }
+  // console.log(tokenCall());
    
+
+  module.exports = {
+    tokenCall: tokenCall,
+    apiCall: apiCall
+  }
+
+  // console.log("Token Call");
+  // console.log(apiCall());
+  
