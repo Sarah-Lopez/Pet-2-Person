@@ -4,11 +4,11 @@ import Row from "../../components/Row";
 import Col from "../../components/Col";
 import Pet from "../../components/Pet";
 
-function Banyard() {
+function Barnyard() {
     return (
         <div>
             <Pet backgroundImage="https://i.imgur.com/5z1LtTG.jpg">
-                <h1>Banyard </h1>
+                <h1>Barnyard </h1>
             </Pet>
 
             <Container Style={{ marginTop: 30 }}>
@@ -33,4 +33,4 @@ function Banyard() {
     );
 }
 
-export default Banyard;
+export default Barnyard;

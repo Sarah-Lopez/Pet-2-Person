@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
 import Dogs from "./pages/Dogs";
 import Cats from "./pages/Cats";
-import Banyard from "./pages/Banyard";
+import Barnyard from "./pages/Barnyard";
 import Birds from "./pages/Birds";
 import Horses from "./pages/Horses";
 import Rabbits from "./pages/Rabbits";
@@ -26,7 +26,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/dogs" component={Dogs} />
             <Route exact path="/cats" component={Cats} />
-            <Route exact path="/banyard" component={Banyard} />
+            <Route exact path="/barnyard" component={Barnyard} />
             <Route exact path="/birds" component={Birds} />
             <Route exact path="/horses" component={Horses} />
             <Route exact path="/rabbits" component={Rabbits} />

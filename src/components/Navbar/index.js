@@ -66,10 +66,10 @@ class Navbar extends React.Component {
 
 
                 <li className="nav-item nav-link">
-                  <Link to="/banyard"
-                  className={window.location.pathname === "/banyard" ? "active" : "nav-link"}
+                  <Link to="/barnyard"
+                  className={window.location.pathname === "/barnyard" ? "active" : "nav-link"}
                   >                    
-                    Banyard</Link>
+                    Barnyard</Link>
                 </li>
 
 
