@@ -1,46 +1,43 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./pages/About";
+import Welcome from "./pages/Welcome";
+import Dogs from "./pages/Dogs";
+import Cats from "./pages/Cats";
+import Barnyard from "./pages/Barnyard";
+import Birds from "./pages/Birds";
+import Horses from "./pages/Horses";
+import Rabbits from "./pages/Rabbits";
+import Scalesfinsother from "./pages/Scalesfinsother";
+import Smallnfurry from "./pages/Smallnfurry";
+import Navbar from './components/Navbar';
+import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper";
 
-// import Pets from "./pages/Pets";
-import Nav from "./components/nav";
-//list in every page but login and app.js.
-
-
-// import Footer from "./components/footer";
-
-import home from "./pages/home"
-import dogs from "./pages/animals/dogs"
-import cats from "./pages/animals/cats"
-import smallnfurry from "./pages/animals/smallnfurry"
-import birds from "./pages/animals/birds"
-import rabbits from "./pages/animals/rabbits"
-import horses from "./pages/animals/horses"
-import barnyard from "./pages/animals/barnyard"
-import scalesfinsother from "./pages/animals/scalesfinsother"
-import favorites from "./pages/favorites"
-import login from "./pages/login"
 
 function App() {
   return (
-    <div>
-      <Nav />
-      {/* <Pets /> */}
-      <Router>
+    <Router>
+      <div>
+        <Navbar />
         <Switch>
-          <Route exact path="/" component={home} />
-          <Route exact path="/dogs" component={dogs} />
-          <Route exact path="/cats" component={cats} />
-          <Route exact path="/smallnfurry" component={smallnfurry} />
-          <Route exact path="/birds"  component={birds} />
-          <Route exact path="/rabbits" component={rabbits} />
-          <Route exact path="/horses" component={horses} />
-          <Route exact path="/barnyard" component={barnyard} />
-          <Route exact path="/scalesfinsother" component={scalesfinsother} />
-          <Route exact path="/favorites" component={favorites} />
-          <Route exact path="/login" component={login} />
+          <Route exact path="/welcome" component={Welcome} />
+          <Wrapper>
+            <Route exact path="/" component={About} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/dogs" component={Dogs} />
+            <Route exact path="/cats" component={Cats} />
+            <Route exact path="/barnyard" component={Barnyard} />
+            <Route exact path="/birds" component={Birds} />
+            <Route exact path="/horses" component={Horses} />
+            <Route exact path="/rabbits" component={Rabbits} />
+            <Route exact path="/scalesfinsother" component={Scalesfinsother} />
+            <Route exact path="/smallnfurry" component={Smallnfurry} />
+          </Wrapper>
         </Switch>
-      </Router>
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
