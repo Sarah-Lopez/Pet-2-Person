@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-// import API from "../../utils/api";
+import API from "../../utils/api";
 
 
 class Pets extends Component {
@@ -8,15 +8,15 @@ class Pets extends Component {
     pets: []
   };
 
-  // componentDidMount() {
-  //   this.loadPets();
-  // }
+  componentDidMount() {
+    this.loadPets();
+  }
 
-  // loadPets = () => {
-  //   API.getPets()
-  //     .then(res => this.setState({ pets: res.data }))
-  //     .catch(err => console.log(err));
-  // };
+  loadPets = () => {
+    API.getPets()
+      .then(res => this.setState({ pets: res.data }))
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (

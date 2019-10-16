@@ -1,12 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Pets from "./pages/Pets";
 import Nav from "./components/nav";
-//list in every page but login and app.js.
-
+//list in every page but login and app.js to prevent navbar from showing on the welcome page.
 
 // import Footer from "./components/footer";
+
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
 
 import home from "./pages/home"
 import dogs from "./pages/animals/dogs"
@@ -18,13 +21,13 @@ import horses from "./pages/animals/horses"
 import barnyard from "./pages/animals/barnyard"
 import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
-import login from "./pages/login"
+// import login from "./pages/login"
 
 function App() {
   return (
     <div>
-      <Nav />
       {/* <Pets /> */}
+      <Nav />
       <Router>
         <Switch>
           <Route exact path="/" component={home} />
@@ -37,7 +40,7 @@ function App() {
           <Route exact path="/barnyard" component={barnyard} />
           <Route exact path="/scalesfinsother" component={scalesfinsother} />
           <Route exact path="/favorites" component={favorites} />
-          <Route exact path="/login" component={login} />
+          {/* <Route exact path="/login" component={login} /> */}
         </Switch>
       </Router>
     </div>

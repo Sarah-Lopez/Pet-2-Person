@@ -16,10 +16,19 @@ export default {
   // Saves a pet to the database
   savePet: function(petData) {
     return axios.post("/api/pets", petData);
-  }
+  },
+
+  getPetfinderResults: function(query) {
+    return axios.get("/api/petfinder");
+  },
+
+
+  
 
   //Will push pets to favorites here.
   //post
 
 };
+
+
 

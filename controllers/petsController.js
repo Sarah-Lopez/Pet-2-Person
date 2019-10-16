@@ -15,6 +15,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+
+//add in findbys for every category.
+
+
+
+
   create: function(req, res) {
     db.Pet
       .create(req.body)
