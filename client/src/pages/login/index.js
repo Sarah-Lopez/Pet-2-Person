@@ -7,6 +7,6 @@ class login extends Component {
              you back to the welcome page</div>
         );
       }
-}
+} 
 
 export default login;

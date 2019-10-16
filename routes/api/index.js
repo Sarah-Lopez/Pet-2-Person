@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const petRoutes = require("./pets");
+// const petRoutes = require("./pets");
 const petFinder = require("./petfinder-api")
 
 // Pet routes
-router.use("/pets", petRoutes);
-// console.log(petFinder);s
+// router.use("/pets", petRoutes);
+console.log(petFinder);
 
 
 module.exports = router;
