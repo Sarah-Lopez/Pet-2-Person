@@ -1,11 +1,11 @@
-.bunny {
+.pet {
     height: 500px;
     background-size: cover;
     background-position: center;
     position: relative;
   }
   
-  .bunny::after {
+  .pet::after {
     content: "";
     display: block;
     opacity: .4;
@@ -17,16 +17,16 @@
     background: black;
   }
   
-  .bunny * {
+  .pet * {
     position: relative;
     z-index: 2;
   }
   
-  .bunny h1, .bunny h2 {
+  .pet h1, .pet h2 {
     color: white;
   }
   
-  .bunny h1 {
+  .pet h1 {
     font-size: 60px;
     padding-top: 140px;
     margin-top: 0;
