@@ -8,7 +8,7 @@ function Scalesfinsother(){
     return (
         <div>
             <Pet backgroundImage="https://i.imgur.com/bYZ0pDV.jpg">
-                <h1>Scales, fins and others </h1>
+                <h1>Scales, fins, and others </h1>
             </Pet>
 
             <Container Style={{ marginTop: 30 }}>
