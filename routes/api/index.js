@@ -1,10 +1,10 @@
 const router = require("express").Router();
 // const petRoutes = require("./pets");
 const petFinder = require("./petfinder-api");
-const pet = require("./pet-routes");
+const petRoutes = require("./pet-routes");
 
 // Pet routes
-// router.use("/pets", petRoutes);
+ router.use("/pets", petRoutes);
 /*
 console.log("PetFinder");
 // console.log(petFinder);
@@ -14,3 +14,5 @@ console.log("PetRoutes");
 
 */
 module.exports = router;
+
+// console.log("PetFinder", pet);

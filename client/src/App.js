@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Pets from "./pages/Pets";
 import Nav from "./components/nav";
 //list in every page but login and app.js.
-
+import { List, ListItem } from "./components/list";
+import API from "./utils/api";
 
 // import Footer from "./components/footer";
 
