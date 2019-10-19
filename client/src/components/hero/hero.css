@@ -6,15 +6,17 @@
     background-position: center;
     position: relative;
 
-    background-color: rgba(255, 255, 255, 0.24);
+    /* nicole added CSS */
+    background-color: rgba(255, 255, 255, 0.432);
     background-blend-mode: lighten;   
+    
     
   }
   
   .hero::after {
     content: "";
     display: block;
-    opacity: .4;
+    opacity: .10;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -29,10 +31,15 @@
   }
   
   .hero h1, .hero h2 {
-    color:white;
+    color:black;
     font-family: 'Nunito', sans-serif;
-    letter-spacing: 3px;
     text-align: center;
+    font-size: 65px;
+    font-weight: 1000;
+    letter-spacing: 20px;
+
+  
+    
   }
   
   .hero h1 {
