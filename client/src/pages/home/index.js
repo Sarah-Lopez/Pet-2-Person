@@ -5,7 +5,14 @@ import API from "../../utils/api";
 
 class Pets extends Component {
   state = {
-    pets: []
+    pets: [],
+    species: "",
+    name: "",
+    type: "",
+    gender: "",
+    age: "",
+    breed: ""
+
   };
 
   componentDidMount() {

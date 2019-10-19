@@ -4,9 +4,7 @@ import React from "react";
 import Nav from "./components/nav";
 //list in every page but login and app.js to prevent navbar from showing on the welcome page.
 
-// import Footer from "./components/footer";
-
-
+// import Footer from "./components/footer"; won't be necessary in the app.
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -22,6 +20,7 @@ import barnyard from "./pages/animals/barnyard"
 import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
 // import login from "./pages/login"
+
 
 function App() {
   return (

@@ -9,22 +9,26 @@ router.route("/")
 // Matches with "/api/pets/:id"
 router
   .route("/species/:species")
-  // .get(petsController.findBySpecies)
-  // .get(petsController.findByName)
-  // .get(petsController.findByType)
-  // .get(petsController.findByGender)
-  // .get(petsController.findByAge)
-  // .get(petsController.findByBreed)
-  
+  .get(petsController.findByType)
+  .get(petsController.findBySpecies)
+  .get(petsController.findByBreed)
+  .get(petsController.findBySize)
+  .get(petsController.findByAge)
+  .get(petsController.findByGender)
+  .get(petsController.findById)
+  .get(petsController.findByName)
+
   // .put(petsController.update)
+
+
 
   // .delete(petsController.remove);
 
+
+
   // .post(petsController.)
 
-
-
-  .get(findBySpecies/Breed);
+  .get(findBySpecies/Breed)
 
 module.exports = router;
 

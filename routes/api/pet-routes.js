@@ -4,7 +4,6 @@ const db = require("./petfinder-api");
 console.log(db);
 
 // Routes
-// =============================================================
 module.exports = function(app) {
 
   // GET route for getting all of the posts
