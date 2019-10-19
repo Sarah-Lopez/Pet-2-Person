@@ -1,32 +1,20 @@
 
 // Requiring our models
 const db = require("./petfinder-api");
+const router = require("express").Router();
 console.log("Pet Api Route");
-console.log(db.tokenCall());
+// console.log(db.tokenCall());
+// console.log(db.apiCall());
+// console.log('>>>>>>>>>>> test', test);
 
-// Routes
-// =============================================================
-module.exports = function(app) {
+router.route("/").get(
+    async(req, res)=>{
+      let api = await db.tokenCall();{}
+      // let bird = await db.bird()
+      // console.log('>>>>>>>>>>> api', api);
+      // console.log('>>>>>>>>>>> bird', bird);
+      res.json(api)
+    }
+)
 
-  // GET route for getting all of the posts
-  app.get("/api/pets", function(req, res) {
-  /*  var query = {};
-    if (req.query.author_id) {
-      query.AuthorId = req.query.author_id;
-    }*/
-    
-  });
-
-  // Get route for retrieving a single post
-  app.get("/api/pets/:id", function(req, res) {
-    db.Post.findOne({
-      where: {
-        id: req.params.id
-      },
-      include: [db.Author]
-    }).then(function(dbPost) {
-      res.json(dbPost);
-    });
-  });
-
-};
+module.exports = router;
