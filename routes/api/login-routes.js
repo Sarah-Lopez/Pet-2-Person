@@ -43,7 +43,6 @@ module.exports = function (app) {
         if (response) {
           req.session.loggedin = true;
           req.session.username = username;
-          // THIS IS WHERE THE CHANGE HAPPENED!
           res.redirect("/");
           // res.redirect("/index.html?username="+username);
         } else {
