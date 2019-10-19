@@ -8,7 +8,7 @@ class barnyard extends Component {
     render() {
         return (
           <div>
-          <Hero backgroundImage="https://i.imgur.com/5z1LtTG.jpg">
+          <Hero backgroundImage="https://i.imgur.com/tTqkWSl.jpg">
               <h1>Barnyard </h1>
           </Hero>
 
