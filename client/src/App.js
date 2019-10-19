@@ -4,9 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Pets from "./pages/Pets";
 import Nav from "./components/nav";
 //list in every page but login and app.js.
-import { List, ListItem } from "./components/list";
-import API from "./utils/api";
-import animal from "./pages/animal"
 
 // import Footer from "./components/footer";
 
@@ -30,7 +27,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={home} />
-          <Route exact path="/dogs" component={animal} />
+          <Route exact path="/dogs" component={dogs} />
           <Route exact path="/cats" component={cats} />
           <Route exact path="/smallnfurry" component={smallnfurry} />
           <Route exact path="/birds"  component={birds} />

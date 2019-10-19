@@ -23,8 +23,8 @@ module.exports = function (app) {
     db.User.create({
       username: req.body.username,
       password: req.body.password,
-      email: req.body.email,
-      fullname: req.body.fullname
+      // email: req.body.email,
+      // fullname: req.body.fullname
     }).then(function (dbUser) {
       res.redirect("/login");
     });
