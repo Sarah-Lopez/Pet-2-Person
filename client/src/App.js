@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Pets from "./pages/Pets";
 import Nav from "./components/nav";
+// import SideDrawer from "./components/sidedrawer";
+// import Backdrop from "./components/backdrop";
 //list in every page but login and app.js.
 
 
@@ -21,27 +23,31 @@ import favorites from "./pages/favorites"
 import login from "./pages/login"
 
 function App() {
-  return (
-    <div>
-      <Nav />
-      {/* <Pets /> */}
-      <Router>
-        <Switch>
-          <Route exact path="/" component={home} />
-          <Route exact path="/dogs" component={dogs} />
-          <Route exact path="/cats" component={cats} />
-          <Route exact path="/smallnfurry" component={smallnfurry} />
-          <Route exact path="/birds"  component={birds} />
-          <Route exact path="/rabbits" component={rabbits} />
-          <Route exact path="/horses" component={horses} />
-          <Route exact path="/barnyard" component={barnyard} />
-          <Route exact path="/scalesfinsother" component={scalesfinsother} />
-          <Route exact path="/favorites" component={favorites} />
-          <Route exact path="/login" component={login} />
-        </Switch>
-      </Router>
-    </div>
-  );
+      return (
+        <div style={{height: '100%'}}>
+          <Nav />
+          {/* <SideDrawer/> */}
+          {/* <Backdrop/> */}
+          {/* <Pets /> */}
+          <main style={{marginTop: '65px'}}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={home} />
+              <Route exact path="/dogs" component={dogs} />
+              <Route exact path="/cats" component={cats} />
+              <Route exact path="/smallnfurry" component={smallnfurry} />
+              <Route exact path="/birds"  component={birds} />
+              <Route exact path="/rabbits" component={rabbits} />
+              <Route exact path="/horses" component={horses} />
+              <Route exact path="/barnyard" component={barnyard} />
+              <Route exact path="/scalesfinsother" component={scalesfinsother} />
+              <Route exact path="/favorites" component={favorites} />
+              <Route exact path="/login" component={login} />
+            </Switch>
+          </Router>
+          </main>
+        </div>
+      );
 }
 
 export default App;
