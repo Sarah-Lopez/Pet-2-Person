@@ -8,7 +8,7 @@ class scalesfinsother extends Component {
     render() {
         return (
 <div>
-            <Hero backgroundImage="https://i.imgur.com/bYZ0pDV.jpg">
+            <Hero backgroundImage="https://i.imgur.com/ufvdgn0.jpg">
                 <h1>Scales, fins, and others </h1>
             </Hero>
 

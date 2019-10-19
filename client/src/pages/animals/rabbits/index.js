@@ -8,7 +8,7 @@ class rabbits extends Component {
     render() {
         return (
 <div>
-            <Hero backgroundImage="https://i.imgur.com/qVAm0UQ.jpg">
+            <Hero backgroundImage="https://i.imgur.com/r0XX8iu.jpg">
                 <h1>Rabbits </h1>
             </Hero>
 
