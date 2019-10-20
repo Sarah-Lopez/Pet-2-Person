@@ -9,7 +9,7 @@ import Nav from "./components/nav";
 import { List, ListItem } from "./components/list";
 import API from "./utils/api";
 
-// import Footer from "./components/footer";
+import footer from "./components/footer";
 
 import home from "./pages/home"
 import dogs from "./pages/animals/dogs"
@@ -22,6 +22,7 @@ import barnyard from "./pages/animals/barnyard"
 import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
 import login from "./pages/login"
+
 
 function App() {
       return (
@@ -44,6 +45,7 @@ function App() {
               <Route exact path="/scalesfinsother" component={scalesfinsother} />
               <Route exact path="/favorites" component={favorites} />
               <Route exact path="/login" component={login} />
+              <Route exact path="/footer" component={footer} />
             </Switch>
           </Router>
           </main>
