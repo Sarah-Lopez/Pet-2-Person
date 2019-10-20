@@ -8,7 +8,7 @@ class birds extends Component {
     render() {
         return (
           <div>
-          <Hero backgroundImage="https://i.imgur.com/yZOQvaI.jpg">
+          <Hero backgroundImage="https://i.imgur.com/lDnJ4Pb.jpg">
               <h1>Birds </h1>
           </Hero>
 
