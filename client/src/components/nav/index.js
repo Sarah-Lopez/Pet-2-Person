@@ -1,17 +1,19 @@
 import React from "react";
 
-// import DrawerToggleButton from "../sidedrawer/drawerToggleButton";
+import DrawerToggleButton from "../sidedrawer/drawerToggleButton";
 import "./navbar.css";
+import { PromiseProvider } from "mongoose";
 // import './nav.css';
 
 
-function Nav() {
-  return (
+// function Nav() {
+//   return (
+  const Nav = props => (
     <header className="taskbar">
     <nav className="taskbar-navigation">
 
-      <div>
-        {/* <DrawerToggleButton /> */}
+      <div className="taskbar-toggle-button">
+        <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
 
       {/* ------------  Logo ------------ */}
@@ -102,8 +104,8 @@ function Nav() {
       </div>
     </nav>
    </header> 
-  );
-}
+)
+// }
 
 
 export default Nav;

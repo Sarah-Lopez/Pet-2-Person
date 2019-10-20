@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Pets from "./pages/Pets";
 import Nav from "./components/nav";
-// import SideDrawer from "./components/sidedrawer";
-// import Backdrop from "./components/backdrop";
+import SideDrawer from "./components/sidedrawer";
+import Backdrop from "./components/backdrop";
 //list in every page but login and app.js.
-import { List, ListItem } from "./components/list";
-import API from "./utils/api";
+// import { List, ListItem } from "./components/list";
+// import API from "./utils/api";
 
 import Footer from "./components/footer";
 
@@ -23,12 +23,36 @@ import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
 import login from "./pages/login"
 
-function App() {
+// function App() {
+  class App extends Component {
+
+  //  line 30 through 51 deal with side drawer
+    state = {
+      sideDrawerOpen: false
+    };
+  
+    drawerToggleClickHandler = () => {
+      this.setState((prevState) => {
+        return { sideDrawerOpen: !prevState.sideDrawerOpen }
+      });
+    };
+  
+    backdropClickHandler = () => {
+      this.setState({ sideDrawerOpen: false })
+    };
+      render (){
+        let sideDrawer;
+        let backdrop;
+    
+        if (this.state.sideDrawerOpen) {
+          sideDrawer = <SideDrawer />
+          backdrop = <Backdrop click={this.backdropClickHandler} />
+        }
       return (
         <div style={{height: '100%'}}>
-          <Nav />
-          {/* <SideDrawer/> */}
-          {/* <Backdrop/> */}
+          <Nav drawerClickHandler={this.drawerToggleClickHandler}/>
+          {sideDrawer}
+          {backdrop}
           {/* <Pets /> */}
           <main style={{marginTop: '65px'}}>
           <Router>
@@ -50,6 +74,7 @@ function App() {
           <Footer />
         </div>
       );
+    }  
 }
 
 export default App;

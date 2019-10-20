@@ -52,6 +52,10 @@
 }
 
 
+
+/* taskbar-toggle-button */
+
+
 /* 32dbc6 - hover effect
 eae9e9 -background navbar
 
@@ -61,6 +65,7 @@ d4d7dd - active link
 
 
 /* toolbar: taskbar
+toolbar__toggle-button: taskbar-toggle-button
 toolbar_navigation: taskbar-navigation
 toolbar_logo: taskbar-logo
 toolbar_navigation-items: taskbar-nav-items */
