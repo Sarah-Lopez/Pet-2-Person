@@ -9,7 +9,7 @@ import Nav from "./components/nav";
 import { List, ListItem } from "./components/list";
 import API from "./utils/api";
 
-// import Footer from "./components/footer";
+import Footer from "./components/footer";
 
 import home from "./pages/home"
 import dogs from "./pages/animals/dogs"
@@ -47,6 +47,7 @@ function App() {
             </Switch>
           </Router>
           </main>
+          <Footer />
         </div>
       );
 }
