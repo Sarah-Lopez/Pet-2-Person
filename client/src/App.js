@@ -41,17 +41,15 @@ import login from "./pages/login"
       this.setState({ sideDrawerOpen: false })
     };
       render (){
-        let sideDrawer;
         let backdrop;
     
         if (this.state.sideDrawerOpen) {
-          sideDrawer = <SideDrawer />
           backdrop = <Backdrop click={this.backdropClickHandler} />
         }
       return (
         <div style={{height: '100%'}}>
           <Nav drawerClickHandler={this.drawerToggleClickHandler}/>
-          {sideDrawer}
+          <SideDrawer show={this.state.sideDrawerOpen}/>
           {backdrop}
           {/* <Pets /> */}
           <main style={{marginTop: '65px'}}>
