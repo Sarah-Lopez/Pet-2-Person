@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
 .hero {
     height: 500px;
     background-size: cover;
     background-position: center;
     position: relative;
+
+    /* nicole added CSS */
+    background-color: rgba(255, 255, 255, 0.432);
+    background-blend-mode: lighten;   
+    
+    
   }
   
   .hero::after {
     content: "";
     display: block;
-    opacity: .4;
+    opacity: .10;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -23,7 +31,15 @@
   }
   
   .hero h1, .hero h2 {
-    color: white;
+    color:black;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 1000;
+    letter-spacing: 20px;
+
+  
+    
   }
   
   .hero h1 {

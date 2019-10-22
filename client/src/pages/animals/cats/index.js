@@ -26,14 +26,14 @@ class cats extends Component {
     render() {
         return (
 <div>
-            <Hero backgroundImage="https://i.imgur.com/fOKqvvB.jpg">
+            <Hero backgroundImage="https://i.imgur.com/w1pcCMG.jpg">
                 <h1>Cats </h1>
             </Hero>
 
             <Container Style={{ marginTop: 30 }}>
                 <Row>
                     <Col size="md-12">
-                        <h1>Welcome to Hero 2 Person</h1>
+                        <h1>Welcome to Pet 2 Person</h1>
                     </Col>
                 </Row>
                 <Row>

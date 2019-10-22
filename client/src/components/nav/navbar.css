@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.taskbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:#eae9e9;
+    height: 65px;
+}
+.taskbar-navigation{
+    display:flex;
+    height: 100%;
+    align-items: center;
+    padding:0 1rem;
+}
+
+.taskbar-nav-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.taskbar-nav-items li {
+    padding: 0 0.5rem;;
+}
+
+.taskbar-nav-items a {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+}
+
+ .taskbar-logo a {
+     color: #420000;
+     text-decoration: none;
+     font-size:1.5rem;
+     font-family: 'Nunito', sans-serif;
+ }
+
+ .taskbar-logo {
+     margin-left: 1rem;
+ }
+
+ .nav-spacer{
+     flex: 1;
+ }
+
+.taskbar-nav-items a:hover,
+.taskbar-nav-items a:active {
+    color: #32dbc6;
+}
+
+
+
+/* media queries  */
+@media (max-width: 768px) {
+    .taskbar-nav-items {
+        display: none;
+    }
+}
+
+/* this media query will hide the button on big screens and remove some margin for the logo */
+@media (min-width:769px) {
+    .taskbar-toggle-button {
+        display: none;
+    }
+
+    .taskbar-logo {
+        margin-left:0;
+    }
+}
+
+/* taskbar-toggle-button */
+
+
+/* 32dbc6 - hover effect
+eae9e9 -background navbar
+
+d4d7dd - active link
+420000 - font-links
+*/
+
+
+/* toolbar: taskbar
+toolbar__toggle-button: taskbar-toggle-button
+toolbar_navigation: taskbar-navigation
+toolbar_logo: taskbar-logo
+toolbar_navigation-items: taskbar-nav-items */
