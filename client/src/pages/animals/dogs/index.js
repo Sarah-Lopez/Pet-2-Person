@@ -13,7 +13,7 @@ class dogs extends Component {
 
     state = {
         pets: [],
-        petSearch: {"type": ""}
+        // petSearch: {"type": ""}
       };
     
       componentDidMount() {
@@ -21,7 +21,7 @@ class dogs extends Component {
       }
     
       loadPets = () => {
-        API.getPet(this.state.petSearch)
+        API.getPet("dog")
           .then(res => this.setState({ pets: res.data }))
           .catch(err => console.log(err));
       };
@@ -69,7 +69,7 @@ class dogs extends Component {
                   </p>
               </Row>
               <Wrapper>
-              <Input
+              {/* <Input
                         name="petSearch"
                         value={this.state.petSearch}
                         onChange={this.handleInputChange}
@@ -83,7 +83,7 @@ class dogs extends Component {
                         className="input-lg"
                       >
                         Search
-                      </Button>
+                      </Button> */}
 
 
                   {this.state.pets.map(pet => (

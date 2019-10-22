@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../../../utils/api";
 
 class animals extends Component {
 
