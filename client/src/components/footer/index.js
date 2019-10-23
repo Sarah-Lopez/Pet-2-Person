@@ -1,10 +1,10 @@
 import React from "react";
-import "./fstyle.css";
+import './footer.css';
 
 function Footer() {
     return (
       <footer className="footer">
-        <span>Pet2Person 2019</span>
+       <span className="font-brand">Pet2Person 2019</span>
       </footer>
     );
   }

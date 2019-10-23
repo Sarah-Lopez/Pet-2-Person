@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Pets from "./pages/Pets";
 import Nav from "./components/nav";
-// import SideDrawer from "./components/sidedrawer";
-// import Backdrop from "./components/backdrop";
+import SideDrawer from "./components/sidedrawer";
+import Backdrop from "./components/backdrop";
 //list in every page but login and app.js.
-import { List, ListItem } from "./components/list";
-import API from "./utils/api";
+// import { List, ListItem } from "./components/list";
+// import API from "./utils/api";
 
-import footer from "./components/footer";
+import Footer from "./components/footer";
 
 import home from "./pages/home"
 import dogs from "./pages/animals/dogs"
@@ -23,13 +23,34 @@ import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
 import login from "./pages/login"
 
+// function App() {
+  class App extends Component {
 
-function App() {
+  //  line 30 through 51 deal with side drawer
+    state = {
+      sideDrawerOpen: false
+    };
+  
+    drawerToggleClickHandler = () => {
+      this.setState((prevState) => {
+        return { sideDrawerOpen: !prevState.sideDrawerOpen }
+      });
+    };
+  
+    backdropClickHandler = () => {
+      this.setState({ sideDrawerOpen: false })
+    };
+      render (){
+        let backdrop;
+    
+        if (this.state.sideDrawerOpen) {
+          backdrop = <Backdrop click={this.backdropClickHandler} />
+        }
       return (
         <div style={{height: '100%'}}>
-          <Nav />
-          {/* <SideDrawer/> */}
-          {/* <Backdrop/> */}
+          <Nav drawerClickHandler={this.drawerToggleClickHandler}/>
+          <SideDrawer show={this.state.sideDrawerOpen}/>
+          {backdrop}
           {/* <Pets /> */}
           <main style={{marginTop: '65px'}}>
           <Router>
@@ -49,8 +70,10 @@ function App() {
             </Switch>
           </Router>
           </main>
+          <Footer />
         </div>
       );
+    }  
 }
 
 export default App;
