@@ -4,132 +4,70 @@ const queryURL = "https://api.petfinder.com/v2/oauth2/token"
 const URL = "https://api.petfinder.com/v2/animals"
 const key = process.env.CLIENT_ID
 const secret = process.env.CLIENT_SECRET
-// const request = require('superagent-use')(require('superagent'));
-// const token = require("./token");
 
-const type = "dog";
-const zip = 85326;
-const gender = "male";
-var token1;
 
-/*
- console.log(token.tokenCall());
-console.log(token.test);
-
-const URL = "https://api.petfinder.com/v2/animals"
-
-module.exports = (type, zip, gender) => {
-  console.log(`Type: ${type}`)
-  console.log(`Zip: ${zip}`);
-  console.log(`Gender: ${gender}`);
-// interceptor used by superagent to add custom header for each request
-request.use((req) => {
-  req.header.custom_header = {
-    "Authorization" : 'Bearer ' + token
-  };
-  console.log(req);
-  return req;
-});
-
-request.get(URL)
-    .query({ 
-      view: 'jsonView',
-      type: type,
-      location: zip,
-      gender: gender,
-      sort: 'distance' 
-    }) // query string
-    .end((err, res) => {
-      if (err) { 
-        return console.log(err); 
-      }
-      console.log(res.body.url);
-      console.log(res.body.explanation);
+const tokenCall = async () => {
+  try {
+    const res = await axios({
+      url: queryURL,
+      data: {
+          grant_type: "client_credentials",
+          client_id: key,
+          client_secret: secret
+      },
+      method: 'post'
     });
-
+    token1 = res.data.access_token;
+    console.log("Token 200 Success!")
+    // console.log(token1);
+    // return [apiCall(token1), birdsCall(token1)];
+    return apiCall(token1)
+  } catch (error) {
+    console.log("Token Error")
+    // console.log(error);
   }
-*/
+};
 
-
-const apiCall = token => {
-/*
-  request.use((req) => {
-    req.header.custom_header = {
-      "Authorization" : 'Bearer ' + token1
-    };
-    console.log("req");
-    return req;
-  }); 
-
-  const instance = axios.create({
-    baseURL: URL,
-    timeout: 1000,
-    headers: {"Authorization" : 'Bearer ' + token1}
-  }); */
-  
-  axios({
-    url: URL,
-    method: 'get',
-    headers: {"Authorization" : 'Bearer ' + token}
-  }).then(function(response) {
-    console.log("API Call: It worked! 200")
-    // console.log(response)
-    return response
-  })
-  .catch(function (error) {
+const apiCall = async token => {
+  try {
+    const response = await axios({
+      url: URL,
+      method: 'get',
+      headers: {"Authorization" : 'Bearer ' + token}
+    });
+    const data = response.data.animals;
+    console.log("API Call: It worked......I guess")
+    // console.log(data);
+    return data
+  } catch (error) {
     console.log("API Call Error")
-    // console.log(error)
-  })
-  .finally(function () {
-    
-  });
-  // return axios;
-}
-   /*
-  request.get(URL)
-      .query({ 
-        view: 'jsonView',
-        type: type,
-        location: zip,
-        gender: gender,
-        sort: 'distance' 
-      }) // query string
-      .end((err, res) => {
-        if (err) { 
-          console.log("Why is this error here?")
-          return console.log(err); 
-        }
-        console.log(res.body.url);
-        console.log(res.body.explanation);
-      });
+    // console.log(error);
+  }
+};
+/*
+const birdsCall = async token => {
+  try {
+    const response = await axios({
+      url: URL,
+      method: 'get',
+      params: {"type": "bird"},
+      headers: {"Authorization" : 'Bearer ' + token}
+    });
+    const data = response.data.animals[0];
+    console.log("Bird Call: It worked......I guess")
+    // console.log(data);
+    return data
+  } catch (error) {
+    console.log("API Call Error")
+    // console.log(error);
+  }
+};
+// getData(url);
+
 */
 
-
-axios({
-  url: queryURL,
-  data: {
-      grant_type: "client_credentials",
-      client_id: key,
-      client_secret: secret
-  },
-  method: 'post'
-}).then(function (response) {
-      token1 = response.data.access_token;
-      expiresIn = response.expires_in;
-      console.log("Token 200 Success!")
-      // console.log("Token1: " + token1);
-      apiCall(token1);
-      // return token1
-      // console.log(response);
-      //callback(token1);
-  })
-  .catch(function (error) {
-      console.log("Token Error")
-      // console.log(error)
-   })
-  .finally(function () {
-     
-   });
-
-
-// console.log(axios.then());
+  module.exports = {
+    apiCall: apiCall,
+    // bird: birdsCall,
+    tokenCall: tokenCall
+  }

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+
+
+  .container {
+      padding: 50px;
+      /* background-color: #eae9e9; */
+    color:black;
+    font-family: 'Nunito', sans-serif;
+    
+    font-size: 15px;
+    /* font-weight: 1000;
+    letter-spacing: 20px; */
+  
+  }
+
+
+  /* .h1 {
+      color: #32dbc6;
+  } */
