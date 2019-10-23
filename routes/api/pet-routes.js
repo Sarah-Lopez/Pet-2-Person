@@ -2,7 +2,7 @@
 // Requiring our models
 const db = require("./petfinder-api");
 const router = require("express").Router();
-console.log("Pet Api Route");
+// console.log("Pet Api Route");
 
 router.route("/").get(
     async(req, res)=>{
@@ -20,7 +20,6 @@ router.route("/dog").get(
       "limit": 5
     }
     let api = await db.tokenCall(params);{}
-    // console.log('>>>>>>>>>>> api', api);
     res.json(api)
   }
 );
@@ -33,7 +32,6 @@ router.route("/cat").get(
       "limit": 5
     }
     let api = await db.tokenCall(params);{}
-    // console.log('>>>>>>>>>>> api', api);
     res.json(api)
   }
 );
@@ -44,7 +42,6 @@ router.get("/blah", (req, res) => {
     async(reqe, res)=>{
       const params = req.query
       let api = await db.tokenCall(params);{}
-      // console.log('>>>>>>>>>>> api', api);
       res.json(api)
     }
   )

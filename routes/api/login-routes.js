@@ -1,9 +1,28 @@
 
 const passport = require('passport');
 const db = require("../models");
+const router = require("express").Router();
 
 module.exports = function (app) {
 
+
+  router.post(
+    '/login',
+    function(req, res, next) {
+      console.log('routes/login.js: ');
+      console.log(req.body);
+      next()
+    },
+    passport.authenticate('local'),
+    (req, res) => {
+      console.log('logged in', req.user);
+      var userInfo = {
+        username: req.user.username
+      };
+      res.send(userInfo);
+    }
+  )
+  /*
   app.post("/login",
     passport.authenticate("local", {
       successRedirect: '/',
@@ -17,7 +36,7 @@ module.exports = function (app) {
       });
       // res.redirect("/");
     }
-  );
+  );*/
 
   app.post("/signup", function (req, res) {
     db.User.create({

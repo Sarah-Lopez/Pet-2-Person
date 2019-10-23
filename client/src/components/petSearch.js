@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import API from "../../../utils/api";
+import Card from "../components/Card";
+import Wrapper from "../components/Wrapper";
 
-class animals extends Component {
+export default class Animals extends Component {
 
     state = {
         pets: []
@@ -19,7 +21,7 @@ class animals extends Component {
 
       render() {
         return (
-            <Wrapper>
+          <Wrapper>
             {this.state.pets.map(pet => (
               <Card 
                   key={pet.id}
@@ -29,10 +31,10 @@ class animals extends Component {
                   location={pet.contact.address.state}
                   description={pet.description}
               />
-          ))}
-      </Wrapper>
+            ))}
+          </Wrapper>
         );
-        }
+      }
 }
 
-export default animals;
+// export default animals;

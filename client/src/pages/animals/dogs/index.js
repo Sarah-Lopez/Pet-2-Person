@@ -7,7 +7,7 @@ import API from "../../../utils/api";
 import Card from "../../../components/Card/Card";
 import Wrapper from "../../../components/Wrapper";
 
-import { Input, Button } from "../../../components/list";
+// import { Input, Button } from "../../../components/list";
 
 class dogs extends Component {
 
