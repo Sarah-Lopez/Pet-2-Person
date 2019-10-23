@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 
 class Favorite extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {};
+  // }
   
   // componentDidMount() {
   //   if (myFavoritePets.length > 0) {
@@ -34,7 +34,7 @@ class Favorite extends Component {
     render() {
       return (
         <div className="Favorite">
-        {this.state.rows ? (
+        {/* {this.state.rows ? (
           this.state.rows
           ) : (
             <h1>
@@ -42,7 +42,7 @@ class Favorite extends Component {
               "You can view your favorite pets here. If you open new session you're favorite pets will delete."
             }
           </h1>
-        )}
+        )} */}
       </div>
     );
   }
