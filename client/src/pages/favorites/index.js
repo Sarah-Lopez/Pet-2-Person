@@ -7,29 +7,29 @@ class Favorite extends Component {
     this.state = {};
   }
   
-  componentDidMount() {
-    if (myFavoritePets.length > 0) {
-      var petRows = [];
-      for (var i = myFavoritePets.length - 1; i >= 0; i--) {
-        fetch(myFavoritePets[i])
-        .then(res => res.json())
-        .then(data => {
-          data.poster_src =
-          "https://image.tmdb.org/t/p/w185" + data.poster_path;
-          const petRow = (
-            <PetRow
-            key={data.id}
-            pet={data}
-            posterSrc={data.poster_src}
-            favornot
-            />
-            );
-            petRows.push(petRow);
-            this.setState({ rows: petRows });
-          });
-        }
-      }
-    }
+  // componentDidMount() {
+  //   if (myFavoritePets.length > 0) {
+  //     var petRows = [];
+  //     for (var i = myFavoritePets.length - 1; i >= 0; i--) {
+  //       fetch(myFavoritePets[i])
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         data.poster_src =
+  //         "https://image.tmdb.org/t/p/w185" + data.poster_path;
+  //         const petRow = (
+  //           <PetRow
+  //           key={data.id}
+  //           pet={data}
+  //           posterSrc={data.poster_src}
+  //           favornot
+  //           />
+  //           );
+  //           petRows.push(petRow);
+  //           this.setState({ rows: petRows });
+  //         });
+  //       }
+  //     }
+  //   }
     
     render() {
       return (
