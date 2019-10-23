@@ -17,4 +17,8 @@ router.route("/").get(
     }
 )
 
+// Routes
+module.exports = function(app) {
+
+
 module.exports = router;
