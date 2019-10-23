@@ -24,7 +24,7 @@ class smallnfurry extends Component {
         </Row>
         <Row>
                 <Col size="md-8">            
-                If you love cuddly creatures then this may be the soul mate for you!                
+                 If you love cuddly creatures then this may be the soul mate for you!                
                 Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.                
                 You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
                 </Col>
