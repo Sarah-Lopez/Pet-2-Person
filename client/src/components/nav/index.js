@@ -1,44 +1,111 @@
 import React from "react";
 
-function Nav() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        Pet 2 Person
-      </a>
-      <a className="navbar-brand" href="/dogs">
-        Dogs
-      </a>
-      <a className="navbar-brand" href="/cats">
-        Cats
-      </a>
-      <a className="navbar-brand" href="smallnfurry">
-        Small n' furry
-      </a>
-      <a className="navbar-brand" href="/rabbits">
-        Rabbits
-      </a>
-      <a className="navbar-brand" href="/birds">
-        Birds
-      </a>
-      <a className="navbar-brand" href="/scalesfinsother">
-        Scales, fins, other
-      </a>
-      <a className="navbar-brand" href="/horses">
-        Horses
-      </a>
-      <a className="navbar-brand" href="/barnyard">
-        Barnyard
-      </a>
-      <a className="navbar-brand" href="/favorites">
-        Favorites
-      </a>
-      <a className="navbar-brand" href="/login">
-        Login
-      </a>
+import DrawerToggleButton from "../sidedrawer/drawerToggleButton";
+import "./navbar.css";
+import { PromiseProvider } from "mongoose";
+// import './nav.css';
+
+
+// function Nav() {
+//   return (
+  const Nav = props => (
+    <header className="taskbar">
+    <nav className="taskbar-navigation">
+
+      <div className="taskbar-toggle-button">
+        <DrawerToggleButton click={props.drawerClickHandler} />
+      </div>
+
+      {/* ------------  Logo ------------ */}
+      <div className="taskbar-logo">
+        <a href="/">
+          Pet 2 Person
+        </a>
+      </div>
+
+        {/* the nav-spacer div will help with positioning of navbar elements */}
+      <div className="nav-spacer" />
+
+      {/* ------------  Links  ------------ */}
+
+      <div className="taskbar-nav-items">
+        <ul>
+          {/* ------------ DOGS ------------ */}
+          <li>    
+            <a href="/dogs">
+            Dogs
+            </a>
+          </li>
+
+          {/* ------------ CATS  ------------ */}
+          <li>
+            <a href="/cats">
+            Cats
+            </a>
+          </li>
+
+          {/* ------------ SMALL N' FURRY ------------ */}
+          <li>
+            <a href="smallnfurry">
+            Small n' furry
+            </a>
+          </li>
+          
+          {/* ------------ RABBITS ------------ */}
+          <li>        
+            <a href="/rabbits">
+            Rabbits
+          </a>
+          </li>
+
+          {/* ------------ BIRDS ------------ */}
+          <li>        
+            <a href="/birds">
+            Birds
+          </a>
+          </li>
+
+          {/* ------------ SCALES, FINS, OTHER ------------ */}
+          <li>        
+            <a href="/scalesfinsother">
+            Scales, fins, other
+          </a>
+          </li>
+
+          {/* ------------ HORSES ------------ */}
+          <li>        
+            <a href="/horses">
+            Horses
+          </a>
+          </li>
+
+          {/* ------------ BARNYARD ------------ */}
+          <li>        
+            <a href="/barnyard">
+            Barnyard
+          </a>
+          </li>
+
+          {/* ------------ FAVORITES ------------ */}
+          <li>        
+            <a href="/favorites">
+            Favorites
+          </a>
+          </li>
+
+          {/* ------------ LOGIN ------------ */}
+          <li>        
+            <a href="/login">
+            Login
+          </a>
+          </li> 
+
+        </ul>
+      </div>
     </nav>
-  );
-}
+   </header> 
+)
+// }
 
 
 export default Nav;
