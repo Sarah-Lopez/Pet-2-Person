@@ -9,7 +9,7 @@ class smallnfurry extends Component {
         return (
 <div>
             <Hero backgroundImage="https://i.imgur.com/HtsoNY8.jpg">
-                <h1>Smallnfurry</h1>
+                <h1>Small n' furry</h1>
             </Hero>
 
             <Container Style={{ marginTop: 30 }}>
