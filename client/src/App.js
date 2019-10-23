@@ -11,6 +11,7 @@ import Backdrop from "./components/backdrop";
 
 import Footer from "./components/footer";
 
+
 import home from "./pages/home"
 import dogs from "./pages/animals/dogs"
 import cats from "./pages/animals/cats"
@@ -21,7 +22,8 @@ import horses from "./pages/animals/horses"
 import barnyard from "./pages/animals/barnyard"
 import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
-import login from "./pages/login"
+// import login from "./pages/login"
+
 
 // function App() {
   class App extends Component {

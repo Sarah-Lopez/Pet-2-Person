@@ -3,6 +3,7 @@ import Container from "../../../components/container";
 import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
+// import Animals from "../../../components/petSearch"
 
 class birds extends Component {
     render() {
@@ -30,6 +31,7 @@ class birds extends Component {
                   </p>
               </Row>
           </Container>
+          {/* <Animals /> */}
       </div>
         );
       }

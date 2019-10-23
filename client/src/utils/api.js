@@ -7,7 +7,7 @@ export default {
   },
   // Gets the pet with the given id
   getPet: function(species) {
-    return axios.get("/api/pets/species" + species);
+    return axios.get("/api/pets/" + species);
   },
   // Deletes the pet with the given id
   deletePet: function(id) {
@@ -16,10 +16,24 @@ export default {
   // Saves a pet to the database
   savePet: function(petData) {
     return axios.post("/api/pets", petData);
-  }
+  },
+
+  // saveUser: function(userData) {
+  //   return axios.post("/signup", userData);
+  // },
+  // getPet: function(query) {
+  //   return axios.get("/api/pets/", { params: query });
+  // },
+  
+  getPetfinderResults: function(query) {
+    return axios.get("/api/petfinder");
+  },
+
 
   //Will push pets to favorites here.
   //post
 
 };
+
+
 

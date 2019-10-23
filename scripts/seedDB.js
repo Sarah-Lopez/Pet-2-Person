@@ -13,7 +13,9 @@ const petSeed = [
     name: "Snoopy",
     id: "00000001",
     type: "Dog",
+    species: "N/A",
     breed: "Mixed",
+    size: "Medium",
     age: "4",
     gender: "M",
     description:
@@ -24,7 +26,9 @@ const petSeed = [
     name: "Snowball",
     id: "00000002",
     type: "Cat",
+    species: "N/A",
     breed: "Siamese",
+    size: "Small",
     age: "7",
     gender: "F",
     description:
@@ -37,6 +41,7 @@ const petSeed = [
     type: "Bird",
     species: "Canary",
     breed: "n/a",
+    size: "Small",
     age: "1",
     gender: "M",
     description:
@@ -49,6 +54,7 @@ const petSeed = [
     type: "Scalesfinsother",
     species: "Bearded dragon",
     breed: "N/A",
+    size: "Large",
     age: "3",
     gender: "F",
     description:
@@ -59,7 +65,9 @@ const petSeed = [
     name: "Mr Ed",
     id: "00000005",
     type: "Horse",
+    species: "N/A",
     breed: "Thoroughbred",
+    size: "Large",
     age: "9",
     gender: "M",
     description:
@@ -72,6 +80,7 @@ const petSeed = [
     type: "Smallnfurry",
     species: "Hamster",
     breed: "Syrian",
+    size: "Small",
     age: "2",
     gender: "M",
     description:
@@ -82,7 +91,9 @@ const petSeed = [
     name: "Bugs",
     id: "00000007",
     type: "Rabbit",
+    species: "N/A",
     breed: "Mini rex",
+    size: "Medium",
     age: "5",
     gender: "M",
     description:
@@ -95,6 +106,7 @@ const petSeed = [
     type: "Barnyard",
     species: "Goat",
     breed: "Boer",
+    size: "Large",
     age: "6",
     gender: "M",
     description:
