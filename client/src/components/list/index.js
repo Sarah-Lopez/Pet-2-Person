@@ -89,4 +89,23 @@ class PetRow extends React.Component {
     );
   }
 }
+
+
+export function Input({ children }) {
+  return (
+    <div className="input-group input-group-lg">
+      <input className="form-control" type="text" {...children} />
+    </div>
+  );
+}
+
+
+export function Button({ type = "default", className, children, onClick }) {
+  return (
+    <button onClick={onClick} className={["btn btn-lg", `btn-${type}`, className].join(" ")}>
+      {children}
+    </button>
+  );
+}
+
 export { PetRow as default, myFavoritePets };
