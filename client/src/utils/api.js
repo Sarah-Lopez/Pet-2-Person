@@ -24,9 +24,16 @@ export default {
   // getPet: function(query) {
   //   return axios.get("/api/pets/", { params: query });
   // },
+  
+  getPetfinderResults: function(query) {
+    return axios.get("/api/petfinder");
+  },
+
 
   //Will push pets to favorites here.
   //post
 
 };
+
+
 

@@ -47,5 +47,8 @@ router.get("/blah", (req, res) => {
   )
 });
 
+// Routes
+// module.exports = function(app) {
+
 
 module.exports = router;
