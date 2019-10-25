@@ -7,6 +7,7 @@
     width: 100%;
     background:#eae9e9;
     height: 65px;
+    z-index: 500;
 }
 .taskbar-navigation{
     display:flex;
@@ -23,7 +24,7 @@
 }
 
 .taskbar-nav-items li {
-    padding: 0 0.5rem;;
+    padding: 0 0.5rem;
 }
 
 .taskbar-nav-items a {
@@ -54,14 +55,17 @@
 
 
 /* media queries  */
-@media (max-width: 768px) {
+/* @media (min-width:768px) { */
+@media (max-width: 799px) {
     .taskbar-nav-items {
         display: none;
     }
 }
 
 /* this media query will hide the button on big screens and remove some margin for the logo */
-@media (min-width:769px) {
+/* @media (min-width:769px) { */
+@media (min-width:800px) {
+
     .taskbar-toggle-button {
         display: none;
     }
