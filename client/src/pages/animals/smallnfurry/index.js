@@ -13,7 +13,7 @@ class smallnfurry extends Component {
                 <h1>Small n' furry</h1>
             </Hero>
 
-            <Container Style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30 }}>
             <Row>
             <Col size="md-8">
             About

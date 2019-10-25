@@ -16,7 +16,7 @@ class rabbits extends Component {
                     <h1>Rabbits</h1>
                 </Hero>
 
-                <Container Style={{ marginTop: 30 }}>
+                <Container style={{ marginTop: 30 }}>
         <Row>
             <Col size="md-8">
             About

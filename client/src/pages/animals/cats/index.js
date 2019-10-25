@@ -31,7 +31,7 @@ class cats extends Component {
                 <h1>Cats </h1>
             </Hero>
 
-            <Container Style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30 }}>
             <Row>
             <Col size="md-8">
             About
