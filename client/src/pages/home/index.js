@@ -125,7 +125,7 @@ class Pets extends Component {
        
   
         <p>
-        What it is?
+        What is it?
         </p>
         <p>
         Pet 2 Person is a web application that allows the user to find their ‘ideal pet’! This application takes an approach like that of a dating site, where an algorithm is used to tailor an ideal match for the user. You will see a list of suggested pets based on their compatibility and show a link to the closest pet shelter in their area.
