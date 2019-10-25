@@ -3,9 +3,46 @@ import Container from "../../../components/container";
 import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
+import API from "../../../utils/api";
+import Card from "../../../components/Card/Card";
+import Wrapper from "../../../components/Wrapper";
 import Form from "../../../components/form";
-
 class smallnfurry extends Component {
+    
+    state = {
+        pets: [],
+        petSearch: "",
+        params: {}
+      };
+    
+      componentDidMount() {
+        this.loadPets();    
+      }
+    
+      loadPets = () => {
+        API.getPet("dog")
+          .then(res => this.setState({ pets: res.data }))
+          .catch(err => console.log(err));
+      };
+
+      handleInputChange = event => {
+        // Destructure the name and value properties off of event.target
+        // Update the appropriate state
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+    
+      handleFormSubmit = event => {
+        // When the form is submitted, prevent its default behavior, get recipes update the recipes state
+        event.preventDefault();
+        API.getSearchPet(this.state.petSearch)
+          .then(res => this.setState({ pets: res.data }))
+          .catch(err => console.log(err));
+      };
+
+
     render() {
         return (
 <div>
@@ -54,15 +91,21 @@ class smallnfurry extends Component {
            <Col size="md-3" />
             <Col size="md-3" />
         </Row>
-
-        <Row >
-            <Col size ="md-4" />
-            <Col size="md-4">
-            <li>Content can go here</li>
-            </Col>
-            <Col size ="md-4" />
-
-        </Row>
+        <Wrapper>
+                  {this.state.pets.map(pet => (
+                    <Card 
+                    key={pet.id}
+                    // id={pet.id}
+                    name={pet.name}
+                    thumbnail={pet.photos}
+                    type={pet.type}
+                    city={pet.contact.address.city}
+                    state={pet.contact.address.state}
+                    description={pet.description}
+                    href={pet.url}
+                    />
+                ))}
+            </Wrapper>
             </Container>
         </div>        );
       }
