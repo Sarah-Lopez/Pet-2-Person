@@ -7,9 +7,12 @@ function Card({thumbnail, name, type, city, state, description, href}) {
   return (
     <div className="card">
       <div className="img-container">
-        <Thumbnail src={thumbnail || "no picture avail"} />
+        {thumbnail.map(pic => (
+          <Thumbnail key={name} src={thumbnail[0].small || name} />
+
+        ))}
          {/* <img alt={props.name} src={props.image} /> */}
-         {console.log(thumbnail)}
+         {/* {console.log(thumbnail)} */}
       </div>
       <div className="content">
         <ul>
