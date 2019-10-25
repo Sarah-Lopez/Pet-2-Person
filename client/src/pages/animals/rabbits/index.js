@@ -3,8 +3,11 @@ import Container from "../../../components/container";
 import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
+import API from "../../../utils/api";
+import Card from "../../../components/Card/Card";
+import Wrapper from "../../../components/Wrapper";
 import Form from "../../../components/form";
-import "./rstyle.css";
+
 class rabbits extends Component {
     render() {
         return (
