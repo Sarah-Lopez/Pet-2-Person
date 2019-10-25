@@ -9,11 +9,8 @@ function Footer() {
 
 <footer className="footer-main">
 
-
 <Row >
-  <Col size="md-4" />
-  <Col size="md-4" >Contact Us</Col>
-  <Col size="md-4" />
+  <Col size="md-12"> <br></br> </Col>
 </Row>
 
   <div className="footer-items">
@@ -31,6 +28,7 @@ function Footer() {
           <Col size="md-2">
         <ul>
           <li>
+            
             Nicole Quintero
           </li>
         </ul>
@@ -56,116 +54,88 @@ function Footer() {
 
 
 
-      {/* LINKEDIN  */}
       <Row >
       <Col size="md-2" />
+      {/* ------------ Sarah ------------ */}
       <Col size="md-2">
         <ul>
           <li>
-          <a href="https://www.linkedin.com/in/sarah-anne-lopez/">Linkedin</a> 
+          <a href="https://www.linkedin.com/in/sarah-anne-lopez/">
+          <i className="fa fa-linkedin"></i>
+          </a> 
+          </li>
+          <li>
+
+          <a href="https://sarah-lopez.github.io/Professional-Portfolio/index.html">
+            <i className="fa fa-suitcase"></i>
+          </a>
+          </li>
+          <li>
+
+          <a href="https://github.com/Sarah-Lopez">
+            <i className="fa fa-github"></i>
+          </a>
           </li>
         </ul>
           </Col>
 
+      {/* ------------ Nicole ------------ */}
           <Col size="md-2">
         <ul>
           <li>
-          <a href="https://www.linkedin.com/in/knicolequintero/">Linkedin</a>
+          <a href="https://www.linkedin.com/in/knicolequintero/">
+          <i className="fa fa-linkedin"></i>
+          </a>
+          </li>
+          <li>
+          <a href="https://nicolequintero7.github.io/Updated-Portfolio-Page/">
+            <i className="fa fa-suitcase"></i>
+          </a>
+          </li>
+          <li>
+          <a href="https://github.com/nicolequintero7">
+            <i className="fa fa-github"></i>
+          </a>
           </li>
         </ul>
           </Col>
-
+      {/* ------------ Marco ------------ */}
           <Col size="md-2">
         <ul>
           <li>
-          <a href="https://www.linkedin.com/in/marco-angel-37347b184/">Linkedin</a>
+          <a href="https://www.linkedin.com/in/marco-angel-37347b184/">
+          <i className="fa fa-linkedin"></i>
+          </a>
+          </li>
+          <li>
+          <a href="https://angel2367716.github.io/Portfolio/">
+            <i className="fa fa-suitcase"></i>
+          </a>
+          </li>
+          <li>
+          <a href="https://github.com/Angel2367716">
+            <i className="fa fa-github"></i></a> 
           </li>
         </ul>
           </Col>
-          
+        
+        {/* ------------ Marco ------------ */}
           <Col size="md-2">
         <ul>
           <li>
-          <a href="https://www.linkedin.com/in/chaa-llisa-taylor-50bba5183/">Linkedin</a>
+          <a href="https://www.linkedin.com/in/chaa-llisa-taylor-50bba5183/">
+          <i className="fa fa-linkedin"></i>
+          </a>
           </li>
-        </ul>
-          </Col>
-          <Col size="md-2" />
-      </Row>
-
-
-
-      {/* PORTFOLIOS */}
-      <Row >
-      <Col size="md-2" />
-      <Col size="md-2">
-        <ul>
           <li>
-          <a href="https://sarah-lopez.github.io/Professional-Portfolio/index.html">Portfolio</a>          
+          <a href="https://chaallisat.github.io/">
+            <i className="fa fa-suitcase"></i>
+          </a>
           </li>
-        </ul>
-          </Col>
-
-          <Col size="md-2">
-        <ul>
           <li>
-          <a href="https://nicolequintero7.github.io/Updated-Portfolio-Page/">Portfolio</a>
-          </li>
-        </ul>
-          </Col>
-
-          <Col size="md-2">
-        <ul>
-          <li>
-          <a href="https://angel2367716.github.io/Portfolio/">Portfolio</a>
-          </li>
-        </ul>
-          </Col>
-          
-          <Col size="md-2">
-        <ul>
-          <li>
-          <a href="https://chaallisat.github.io/">Portfolio</a>
-          </li>
-        </ul>
-          </Col>
-          <Col size="md-2" />
-      </Row>
-
-      {/* Github */}
-      <Row >
-      <Col size="md-2" />
-
-          <Col size="md-2">
-        <ul>
-          <li>
-          {/* <i className="fa fa-pencil"> */}
-
-          <a href="https://github.com/Sarah-Lopez">Repo</a>
-          {/* </i> */}
-          </li>
-        </ul>
-          </Col>
-
-          <Col size="md-2">
-        <ul>
-          <li>
-          <a href="https://github.com/nicolequintero7">Repo</a>
-          </li>
-        </ul>
-          </Col>
-      <Col size="md-2">
-        <ul>
-          <li>
-          <a href="https://github.com/Angel2367716">Repo</a> 
-          </li>
-        </ul>
-          </Col>
-          
-          <Col size="md-2">
-        <ul>
-          <li>
-          <a href="https://github.com/chaallisat">Repo</a>
+          <a href="https://github.com/chaallisat">
+            <i className="fa fa-github"></i>
+          </a>
           </li>
         </ul>
           </Col>
