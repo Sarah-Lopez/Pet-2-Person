@@ -85,12 +85,14 @@ class birds extends Component {
                 <Wrapper>
                   {this.state.pets.map(pet => (
                     <Card 
-                        key={pet.id}
-                        name={pet.name}
-                        image={pet.image}
-                        type={pet.type}
-                        location={pet.contact.address.state}
-                        description={pet.description}
+                    key={pet.id}
+                    name={pet.name}
+                    thumbnail={pet.photos}
+                    type={pet.type}
+                    city={pet.contact.address.city}
+                    state={pet.contact.address.state}
+                    description={pet.description}
+                    href={pet.url}
                     />
                 ))}
             </Wrapper>
