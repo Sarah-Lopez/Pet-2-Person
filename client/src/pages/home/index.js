@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
-
 import Container from "../../components/container";
 import Row from "../../components/row";
 import Col from "../../components/col";
 import Hero from "../../components/hero";
+// import API from "../../utils/api";
 import './home.css';
 
 import API from "../../utils/api";
@@ -79,9 +79,7 @@ class Pets extends Component {
     gender: "",
     age: "",
     breed: ""
-
   };
-
 
   componentDidMount() {
     this.loadPets();
@@ -115,7 +113,7 @@ class Pets extends Component {
 
           </Hero>
 
-<Container Style={{ marginTop: 30 }}>
+<Container style={{ marginTop: 30 }}>
     <Row>
         <Col size="md-12">
             <h1 class="h1">Pet 2 Person ♥ Mission Statement</h1>
@@ -125,7 +123,7 @@ class Pets extends Component {
        
   
         <p>
-        What it is?
+        What is it?
         </p>
         <p>
         Pet 2 Person is a web application that allows the user to find their ‘ideal pet’! This application takes an approach like that of a dating site, where an algorithm is used to tailor an ideal match for the user. You will see a list of suggested pets based on their compatibility and show a link to the closest pet shelter in their area.
@@ -139,12 +137,10 @@ class Pets extends Component {
 
        
 
-
     </Row>
 </Container>
 </div>);
 }
-
 }
 
 export default Pets;

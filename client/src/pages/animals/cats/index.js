@@ -31,7 +31,7 @@ class cats extends Component {
                 <h1>Cats </h1>
             </Hero>
 
-            <Container Style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30 }}>
             <Row>
             <Col size="md-8">
             About
@@ -71,15 +71,6 @@ class cats extends Component {
             </Col>
            <Col size="md-3" />
             <Col size="md-3" />
-        </Row>
-
-        <Row >
-            <Col size ="md-4" />
-            <Col size="md-4">
-            <li>Content can go here</li>
-            </Col>
-            <Col size ="md-4" />
-
         </Row>
                 <Wrapper>
                   {this.state.pets.map(pet => (

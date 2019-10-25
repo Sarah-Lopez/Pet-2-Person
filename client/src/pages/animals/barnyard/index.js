@@ -31,7 +31,7 @@ class barnyard extends Component {
               <h1>Barnyard </h1>
           </Hero>
 
-          <Container Style={{ marginTop: 30 }}>
+          <Container style={{ marginTop: 30 }}>
            <Row>
            <Col size="md-8">
            About
@@ -70,22 +70,17 @@ class barnyard extends Component {
           <Col size="md-3" />
            <Col size="md-3" />
        </Row>
-       <Row >
-           <Col size ="md-4" />
-           <Col size="md-4">
-           <li>Content can go here</li>
-           </Col>
-           <Col size ="md-4" />
-       </Row>
                <Wrapper>
                  {this.state.pets.map(pet => (
                    <Card
-                       key={pet.id}
-                       name={pet.name}
-                       image={pet.image}
-                       type={pet.type}
-                       location={pet.contact.address.state}
-                       description={pet.description}
+                   key={pet.id}
+                   name={pet.name}
+                   thumbnail={pet.photos}
+                   type={pet.type}
+                   city={pet.contact.address.city}
+                   state={pet.contact.address.state}
+                   description={pet.description}
+                   href={pet.url}
                    />
                ))}
            </Wrapper>
