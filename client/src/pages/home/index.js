@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
-
 import Container from "../../components/container";
 import Row from "../../components/row";
 import Col from "../../components/col";
 import Hero from "../../components/hero";
+// import API from "../../utils/api";
 import './home.css';
 
 import API from "../../utils/api";
@@ -79,9 +79,7 @@ class Pets extends Component {
     gender: "",
     age: "",
     breed: ""
-
   };
-
 
   componentDidMount() {
     this.loadPets();
@@ -139,12 +137,10 @@ class Pets extends Component {
 
        
 
-
     </Row>
 </Container>
 </div>);
 }
-
 }
 
 export default Pets;
