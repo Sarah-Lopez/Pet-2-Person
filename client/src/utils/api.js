@@ -21,9 +21,9 @@ export default {
   // saveUser: function(userData) {
   //   return axios.post("/signup", userData);
   // },
-  // getPet: function(query) {
-  //   return axios.get("/api/pets/", { params: query });
-  // },
+  getSearchPet: function(type, query) {
+     return axios.get("/api/pets/" + type, { params: query });
+  },
   
   getPetfinderResults: function(query) {
     return axios.get("/api/petfinder");
