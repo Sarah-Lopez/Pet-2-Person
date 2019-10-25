@@ -139,7 +139,10 @@ function Footer() {
           <Col size="md-2">
         <ul>
           <li>
+          {/* <i className="fa fa-pencil"> */}
+
           <a href="https://github.com/Sarah-Lopez">Repo</a>
+          {/* </i> */}
           </li>
         </ul>
           </Col>
