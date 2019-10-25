@@ -3,8 +3,28 @@ import Container from "../../../components/container";
 import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
+import API from "../../../utils/api";
+import Card from "../../../components/Card/Card";
+import Wrapper from "../../../components/Wrapper";
+import Form from "../../../components/form";
 
 class horses extends Component {
+
+    state = {
+        pets: []
+      };
+    
+      componentDidMount() {
+        this.loadPets();
+      }
+    
+      loadPets = () => {
+        API.getPet("cat")
+          .then(res => this.setState({ pets: res.data }))
+          .catch(err => console.log(err));
+      };
+
+
     render() {
         return (
           <div>
@@ -12,26 +32,62 @@ class horses extends Component {
               <h1>Horses</h1>
           </Hero>
 
-          <Container style={{ marginTop: 30 }}>
-              <Row>
-                  <Col size="md-12">
-                      <h1>Welcome to Hero 2 Person</h1>
-                  </Col>
-              </Row>
-              <Row>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                  </p>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                  </p>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                  </p>
-              </Row>
-          </Container>
-      </div>        );
-      }
+          <Container Style={{ marginTop: 30 }}>
+           <Row>
+           <Col size="md-8">
+           About
+           </Col>
+           <Col size="md-4">
+           Top horse breeds:
+           </Col>
+       </Row>
+       <Row>
+               <Col size="md-8">
+               Horses are wonderful creatures, but they are not for everyone. If you consider adopting a horse, then you will need plenty of space. Horses can be expensive to maintain but there are many benefits of adopting a horse. Horses encourage physical activity as they need to be groomed and walked. Many horses are used for therapy reasons. They can help to reduce stress and improve mood. 
+               </Col>
+            <Col size="md-4">
+               <li>
+               ♥ American Quarter Horse
+               </li>
+               <li>
+               ♥ Arabians
+               </li>
+               <li>
+               ♥ Thoroughbreds
+               </li>
+               <li>
+               ♥ Appaloosa
+               </li>
+               </Col>
+      </Row>
+<Row>
+<br />
+<br />
+</Row>
+      <Row>
+           <Col size="md-6">
+               <Form />
+           </Col>
+          <Col size="md-3" />
+           <Col size="md-3" />
+       </Row>
+               <Wrapper>
+                 {this.state.pets.map(pet => (
+                   <Card
+                   key={pet.id}
+                   name={pet.name}
+                   thumbnail={pet.photos}
+                   type={pet.type}
+                   city={pet.contact.address.city}
+                   state={pet.contact.address.state}
+                   description={pet.description}
+                   href={pet.url}
+                   />
+               ))}
+           </Wrapper>
+           </Container>
+       </div>        );
+     }
 }
 
 export default horses;

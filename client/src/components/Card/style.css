@@ -33,3 +33,11 @@
     margin-top: 18px;
   }
   
+  div.thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 100%;
+  }
+  

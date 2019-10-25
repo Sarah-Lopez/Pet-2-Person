@@ -14,7 +14,8 @@ class dogs extends Component {
 
     state = {
         pets: [],
-        // petSearch: {"type": ""}
+        petSearch: "",
+        params: {}
       };
     
       componentDidMount() {
@@ -39,7 +40,7 @@ class dogs extends Component {
       handleFormSubmit = event => {
         // When the form is submitted, prevent its default behavior, get recipes update the recipes state
         event.preventDefault();
-        API.getPet(this.state.petSearch)
+        API.getSearchPet(this.state.petSearch)
           .then(res => this.setState({ pets: res.data }))
           .catch(err => console.log(err));
       };
@@ -58,27 +59,25 @@ class dogs extends Component {
             About
             </Col>
             <Col size="md-4">
-            Features
+            Most Popular Dog Breeds
             </Col>            
         </Row>
         <Row>
                 <Col size="md-8">            
-                If you love cuddly creatures then this may be the soul mate for you!                
-                Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.                
-                You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
+                Dogs are known as “mans best friend” and have bonded with humans for over 12,000 years. This is a versatile type of pet that can fit nearly all lifestyles. Some breeds prefer a more athletic lifestyle while others are ok with more of a low energy lifestyle. Since dogs come in many sizes, there may be an adoptable dog out there that can be compatible for you! 
                 </Col>
              <Col size="md-4">        
                 <li>
-                ♥ fluffy
+                ♥ Labrador Retriever
                 </li>
                 <li>
-                ♥ short tails
+                ♥ German Shepherd
                 </li>
                 <li>
-                ♥ whiskers
+                ♥ Golden Retriever
                 </li>
                 <li>
-                ♥ distinctive long ears
+                ♥ French Bulldog
                 </li>
                 </Col>
        </Row>
@@ -96,40 +95,18 @@ class dogs extends Component {
             <Col size="md-3" />
         </Row>
 
-        <Row >
-            <Col size ="md-4" />
-            <Col size="md-4">
-            <li>Content can go here</li>
-            </Col>
-            <Col size ="md-4" />
-
-        </Row>
               <Wrapper>
-              {/* <Input
-                        name="petSearch"
-                        value={this.state.petSearch}
-                        onChange={this.handleInputChange}
-                        placeholder="Search For a Pet"
-                      />
-
-
-                      <Button
-                        onClick={this.handleFormSubmit}
-                        type="success"
-                        className="input-lg"
-                      >
-                        Search
-                      </Button> */}
-
-
                   {this.state.pets.map(pet => (
                     <Card 
-                        key={pet.id}
-                        name={pet.name}
-                        image={pet.image}
-                        type={pet.type}
-                        location={pet.contact.address.state}
-                        description={pet.description}
+                    key={pet.id}
+                    // id={pet.id}
+                    name={pet.name}
+                    thumbnail={pet.photos}
+                    type={pet.type}
+                    city={pet.contact.address.city}
+                    state={pet.contact.address.state}
+                    description={pet.description}
+                    href={pet.url}
                     />
                 ))}
             </Wrapper>
@@ -138,8 +115,6 @@ class dogs extends Component {
         );
       }
 }
-// import { List, ListItem } from "./components/list";
-// import API from "./utils/api";
 
 // class dogs extends Component {
 
@@ -157,23 +132,5 @@ class dogs extends Component {
 //       .catch(err => console.log(err));
 //   };
 
-
-//   render() {
-//     return (
-//       <div>This is a page for dogs!
-//         <p>
-//           {this.state.pets.map(pet => (
-//             // <ListItem key={pet._id}>
-//               <a href={"/dogs/" + pet._id}>
-//                 <strong>
-//                   {pet.type} by {pet.name}
-//                 </strong>
-//               </a>
-            
-//           ))}
-//         </p>
-//       </div>
-//     );
-//   }
 
 export default dogs;
