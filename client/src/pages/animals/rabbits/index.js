@@ -14,10 +14,10 @@ class rabbits extends Component {
                     <h1>Rabbits</h1>
                 </Hero>
 
-                <Container Style={{ marginTop: 30 }}>
+                <Container style={{ marginTop: 30 }}>
                     <Row>
                         <Col size="md-12">
-                            <h1 class="h1">Pet 2 Person</h1>
+                            <h1 className="h1">Pet 2 Person</h1>
                         </Col>
                     </Row>
                     <Row>

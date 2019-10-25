@@ -12,7 +12,7 @@ class scalesfinsother extends Component {
                 <h1>Scales, fins, and others </h1>
             </Hero>
 
-            <Container Style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30 }}>
                 <Row>
                     <Col size="md-12">
                         <h1>Welcome to Hero 2 Person</h1>

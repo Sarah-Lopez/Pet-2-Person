@@ -4,6 +4,7 @@ import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
 
+
 class cats extends Component {
     render() {
         return (
@@ -12,7 +13,7 @@ class cats extends Component {
                 <h1>Cats </h1>
             </Hero>
 
-            <Container Style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30 }}>
                 <Row>
                     <Col size="md-12">
                         <h1>Welcome to Pet 2 Person</h1>
