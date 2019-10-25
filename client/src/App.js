@@ -11,6 +11,7 @@ import Footer from "./components/footer";
 // import API from "./utils/api";
 
 
+
 import home from "./pages/home"
 import dogs from "./pages/animals/dogs"
 import cats from "./pages/animals/cats"

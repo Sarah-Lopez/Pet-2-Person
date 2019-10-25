@@ -4,16 +4,14 @@ const mongoose = require("mongoose");
 require('dotenv').config();
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
+const db = require("./models");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 
 //Local Strategey to authenticate request
-passport.use(new LocalStrategy({
-    usernameField: 'username',
-    passwordField: 'password'
-  },
+passport.use(new LocalStrategy(
   function(username, password, done) {
     db.User.findOne({ username: username }, function(err, user) {
       if (err) { return done(err); }
@@ -21,6 +19,7 @@ passport.use(new LocalStrategy({
         return done(null, false, { message: 'Incorrect username.' });
       } 
       // if (user.password != password) {
+      // if (user.verifyPassword(password)) {
       if (!user.validPassword(password)) {
         return done(null, false, { message: 'Incorrect password.' });
       }
@@ -55,8 +54,8 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(
     require('express-session')({ 
         secret: 'keyboard cat', 
-        resave: true, 
-        saveUninitialized: true 
+        resave: false,
+        saveUninitialized: false 
     })
 );
 // Passport Middleware

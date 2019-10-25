@@ -48,3 +48,10 @@
     margin-top: 0;
   }
   
+/* media queries  */
+@media (max-width: 768px) {
+  .hero {
+      width: 100%;
+  }
+}
+

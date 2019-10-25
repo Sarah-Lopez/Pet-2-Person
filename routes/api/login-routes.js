@@ -1,9 +1,28 @@
 
 const passport = require('passport');
 const db = require("../models");
+const router = require("express").Router();
 
 module.exports = function (app) {
 
+
+  router.post(
+    '/login',
+    function(req, res, next) {
+      console.log('routes/login.js: ');
+      console.log(req.body);
+      next()
+    },
+    passport.authenticate('local'),
+    (req, res) => {
+      console.log('logged in', req.user);
+      var userInfo = {
+        username: req.user.username
+      };
+      res.send(userInfo);
+    }
+  )
+  /*
   app.post("/login",
     passport.authenticate("local", {
       successRedirect: '/',
@@ -17,14 +36,14 @@ module.exports = function (app) {
       });
       // res.redirect("/");
     }
-  );
+  );*/
 
   app.post("/signup", function (req, res) {
     db.User.create({
       username: req.body.username,
       password: req.body.password,
-      email: req.body.email,
-      fullname: req.body.fullname
+      // email: req.body.email,
+      // fullname: req.body.fullname
     }).then(function (dbUser) {
       res.redirect("/login");
     });
@@ -43,7 +62,6 @@ module.exports = function (app) {
         if (response) {
           req.session.loggedin = true;
           req.session.username = username;
-          // THIS IS WHERE THE CHANGE HAPPENED!
           res.redirect("/");
           // res.redirect("/index.html?username="+username);
         } else {

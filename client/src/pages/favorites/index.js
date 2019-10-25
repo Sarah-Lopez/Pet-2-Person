@@ -7,10 +7,10 @@ import React, { Component } from "react";
 import PetRow, { myFavoritePets } from "../../components/list/index";
 
 class Favorite extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {};
+  // }
   
   componentDidMount() {
     if (myFavoritePets.length > 0) {
@@ -61,7 +61,7 @@ class Favorite extends Component {
               "You can view your favorite pets here. If you open a new session your favorite pets will delete."
             }
           </h1>
-        )}
+        )} */}
       </div>
     );
   }
