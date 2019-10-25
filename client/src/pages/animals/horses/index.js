@@ -71,13 +71,6 @@ class horses extends Component {
           <Col size="md-3" />
            <Col size="md-3" />
        </Row>
-       <Row >
-           <Col size ="md-4" />
-           <Col size="md-4">
-           <li>Content can go here</li>
-           </Col>
-           <Col size ="md-4" />
-       </Row>
                <Wrapper>
                  {this.state.pets.map(pet => (
                    <Card
