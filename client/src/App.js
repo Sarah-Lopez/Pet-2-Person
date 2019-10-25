@@ -68,6 +68,8 @@ import login from "./pages/login"
               <Route exact path="/scalesfinsother" component={scalesfinsother} />
               <Route exact path="/favorites" component={favorites} />
               <Route exact path="/login" component={login} />
+              {/* <Route exact path="/footer" component={footer} /> */}
+              
             </Switch>
           </Router>
           </main>
@@ -77,4 +79,12 @@ import login from "./pages/login"
     }  
 }
 
+
+
+
+
+
+
 export default App;
+
+

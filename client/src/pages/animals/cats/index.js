@@ -37,27 +37,25 @@ class cats extends Component {
             About
             </Col>
             <Col size="md-4">
-            Features
+            Top cat breeds:
             </Col>            
         </Row>
         <Row>
                 <Col size="md-8">            
-                If you love cuddly creatures then this may be the soul mate for you!                
-                Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.                
-                You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
+                There are about 38 different species of cats. Most domestic cats weigh about 6 to 20 pounds, making this little creature a good fit for any home size. Cats make good napping buddies as they sleep most of the day. Cats are most active from dawn to dusk, perfect match if you are a night owl. If you have a busy lifestyle, then a cat is low maintenance and does not need much to be happy!
                 </Col>
              <Col size="md-4">        
                 <li>
-                ♥ fluffy
+                ♥ Siamese
                 </li>
                 <li>
-                ♥ short tails
+                ♥ Persian
                 </li>
                 <li>
-                ♥ whiskers
+                ♥ Maine Coon
                 </li>
                 <li>
-                ♥ distinctive long ears
+                ♥ Bengal
                 </li>
                 </Col>
        </Row>
@@ -102,4 +100,12 @@ class cats extends Component {
       }
 }
 
+
+
+
+
+
 export default cats;
+
+
+
