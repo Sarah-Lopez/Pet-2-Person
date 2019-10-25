@@ -5,7 +5,6 @@ import Col from "../../../components/col";
 import Hero from "../../../components/hero";
 import Form from "../../../components/form";
 
-
 class barnyard extends Component {
     render() {
         return (
@@ -14,13 +13,13 @@ class barnyard extends Component {
               <h1>Barnyard </h1>
           </Hero>
 
-          <Container style={{ marginTop: 30 }}>
+          <Container Style={{ marginTop: 30 }}>
               <Row>
                   <Col size="md-12">
                       <h1>Welcome to Pet 2 Person</h1>
                   </Col>
               </Row>
-              <Row>
+              <row>
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
                   </p>
@@ -30,21 +29,8 @@ class barnyard extends Component {
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
                   </p>
-              </Row>
-              <Row>
-                    <Col size="md-12">
-                      <Form />
-                    </Col>  
-                </Row>
-                <Row>
-                    <Col size ="4" />
-                    <Col size="4">
-                    <p>Content can go here</p>
-                    </Col>
-                    <Col size ="4" />
-                </Row>
+              </row>
           </Container>
-
       </div>
         );
       }

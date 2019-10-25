@@ -12,7 +12,7 @@ class horses extends Component {
               <h1>Horses</h1>
           </Hero>
 
-          <Container style={{ marginTop: 30 }}>
+          <Container Style={{ marginTop: 30 }}>
               <Row>
                   <Col size="md-12">
                       <h1>Welcome to Hero 2 Person</h1>

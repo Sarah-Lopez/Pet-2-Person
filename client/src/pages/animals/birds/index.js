@@ -13,7 +13,7 @@ class birds extends Component {
               <h1>Birds </h1>
           </Hero>
 
-          <Container style={{ marginTop: 30 }}>
+          <Container Style={{ marginTop: 30 }}>
               <Row>
                   <Col size="md-12">
                       <h1>Welcome to Hero 2 Person</h1>

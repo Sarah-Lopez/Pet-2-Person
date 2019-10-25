@@ -18,17 +18,18 @@ router
   .get(petsController.findByGender)
   .get(petsController.findById)
   .get(petsController.findByName)
-  .get(findBySpecies/Breed)
 
   // .put(petsController.update)
+
+
+
   // .delete(petsController.remove);
+
+
+
   // .post(petsController.)
 
-
-//Below is where the get and post request for favorite pets.
-
-  .get(petsController.Favorite)
- .delete(petsController.Favorite)
+  .get(findBySpecies/Breed)
 
 module.exports = router;
 

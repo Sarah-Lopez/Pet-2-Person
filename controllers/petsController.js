@@ -9,7 +9,7 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  //findAll function is our testing ground to get results rendered on a page.
+  //findAll function is out testing ground to get results rendered on a page.
 
   findByType: function (req, res) {
     db.Pet
@@ -61,6 +61,9 @@ module.exports = {
   },
 
 
+  //add in findbys for every category.
+
+
   create: function (req, res) {
     db.Pet
       .create(req.body)
@@ -79,28 +82,5 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  },
-
-// ****************** Get and Post functions go below (read & create in CRUD) **************
-// get function
-// add pet function
-
-addfavorite: function (req, res) {
-  db.Favorite
-    .addfavorite(req.body)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-},
-removefavorite: function (req, res) {
-  db.Favorite
-    .findById({ _id: req.params.id })
-    .then(dbModel => dbModel.removefavorite())
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-}
-
-
-
-
-
+  }
 };
