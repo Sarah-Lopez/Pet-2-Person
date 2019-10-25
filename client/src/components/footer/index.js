@@ -16,7 +16,7 @@ function Footer() {
 
       <div className="footer-items">
         <Row >
-          <Col size="md-2" />
+          <Col size="md-1" />
           {/* ------------ Sarah ------------ */}
           <Col size="md-2">
             <ul>
@@ -80,6 +80,9 @@ function Footer() {
               </Col>
             </Row>
           </Col>
+
+          <Col size="md-2" />
+
           {/* ------------ Marco ------------ */}
 
           <Col size="md-2">
@@ -144,7 +147,7 @@ function Footer() {
               </Col>
             </Row>
           </Col>
-          <Col size="md-2" />
+          <Col size="md-1" />
         </Row>
         <Row><Col size="lg-12" /><br></br></Row>
         <Row>
