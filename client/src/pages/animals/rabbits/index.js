@@ -25,7 +25,7 @@ class rabbits extends Component {
         <Row>
                 <Col size="md-8">            
                 If you love cuddly creatures then this may be the soul mate for you!                
-                Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.                
+                Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1 to 10 pounds.                
                 You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
                 </Col>
              <Col size="md-4">        
@@ -48,25 +48,6 @@ class rabbits extends Component {
 <br />
 <br />
 </Row>
-<<<<<<< HEAD
-      <Row>
-           <Col size="md-6">
-               <Form />
-           </Col>
-          <Col size="md-3" />
-           <Col size="md-3" />
-       </Row>
-       <Row >
-           <Col size ="md-4" />
-           <Col size="md-4">
-           <li>Content can go here</li>
-           </Col>
-           <Col size ="md-4" />
-       </Row>
-    </Container>
-       </div>);
-   }
-=======
 
        <Row>
             <Col size="md-6">
@@ -87,6 +68,5 @@ class rabbits extends Component {
      </Container>
         </div>);
     }
->>>>>>> a30de6b50680bab672e02e2668e15158f67b844a
 }
 export default rabbits;

@@ -9,6 +9,21 @@ import Wrapper from "../../../components/Wrapper";
 import Form from "../../../components/form";
 
 class scalesfinsother extends Component {
+
+    state = {
+        pets: []
+      };
+    
+      componentDidMount() {
+        this.loadPets();
+      }
+    
+      loadPets = () => {
+        API.getPet("cat")
+          .then(res => this.setState({ pets: res.data }))
+          .catch(err => console.log(err));
+      };
+
     render() {
         return (
 <div>
@@ -22,27 +37,26 @@ class scalesfinsother extends Component {
            About
            </Col>
            <Col size="md-4">
-           Features
+           Top pets with scales and fins:
            </Col>
        </Row>
        <Row>
                <Col size="md-8">
-               If you love cuddly creatures then this may be the soul mate for you!
-               Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.
-               You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
+               Fish and reptiles are popular pets. Reptiles are the most ancient species on Earth. They eat a variety of food based on their type. This can include being herbivores, insectivores, or carnivores. It is important to do research on reptiles as pets. Some need a special diet and maintain a certain temperature to live. Fish can be calming to watch; they are easy to care for and are an affordable option for those looking for a pet with inexpensive care. Like other animals that live in enclosures, reptiles and fish can be easy to maintain and can allow children to help with their care. 
+               
                </Col>
             <Col size="md-4">
                <li>
-               :hearts: fluffy
+               ♥ snakes
                </li>
                <li>
-               :hearts: short tails
+               ♥ fish
                </li>
                <li>
-               :hearts: whiskers
+               ♥ lizards
                </li>
                <li>
-               :hearts: distinctive long ears
+               ♥ turtles
                </li>
                </Col>
       </Row>

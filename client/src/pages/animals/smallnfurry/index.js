@@ -19,27 +19,25 @@ class smallnfurry extends Component {
             About
             </Col>
             <Col size="md-4">
-            Features
+            Top types of small n furry:
             </Col>            
         </Row>
         <Row>
                 <Col size="md-8">            
-                 If you love cuddly creatures then this may be the soul mate for you!                
-                Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.                
-                You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
+                Small rodent animals have a long history of domestication and are known for being calm and tame. This is a good pet for children as they stay in an enclosure. Kids can learn responsibility by helping with their care such as feeding and cleaning. It is important to do research on rodent pets as some are social and some prefer to live alone. These little creatures are low maintenance and an ideal fit for a pet if you live in an apartment or small home. 
                 </Col>
              <Col size="md-4">        
                 <li>
-                ♥ fluffy
+                ♥ Hamster
                 </li>
                 <li>
-                ♥ short tails
+                ♥ Gerbil
                 </li>
                 <li>
-                ♥ whiskers
+                ♥ Mouse
                 </li>
                 <li>
-                ♥ distinctive long ears
+                ♥ Rats
                 </li>
                 </Col>
        </Row>
