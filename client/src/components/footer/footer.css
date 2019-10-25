@@ -20,7 +20,9 @@
     display: flex;
   }
 
-
+li {
+  list-style: none;
+}
   .footer-items li {
     padding: 0 0.5rem;
   }
