@@ -19,7 +19,7 @@ class horses extends Component {
       }
     
       loadPets = () => {
-        API.getPet("cat")
+        API.getPet("horse")
           .then(res => this.setState({ pets: res.data }))
           .catch(err => console.log(err));
       };

@@ -20,8 +20,9 @@
     border-radius: 6px;
     margin-left: 15px;
     background-color: yellow;
-    padding: 8%;
+    padding: 5%;
     align-items: left;
+    /* ********************* Use css or card component to display animals in favorites page?   */
   }
   
   .PetRow > div {
