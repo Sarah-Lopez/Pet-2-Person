@@ -58,27 +58,25 @@ class dogs extends Component {
             About
             </Col>
             <Col size="md-4">
-            Features
+            Most Popular Dog Breeds
             </Col>            
         </Row>
         <Row>
                 <Col size="md-8">            
-                If you love cuddly creatures then this may be the soul mate for you!                
-                Rabbits can live in many different environments. They come in a variety of sizes which can range from around 1LB to 10LBs.                
-                You may be a good match for this little creature if you enjoy a plant-based diet and are social! Rabbits enjoy a varity of vegtables and fruit. They enjoy living in large colonies.
+                Dogs are known as “mans best friend” and have bonded with humans for over 12,000 years. This is a versatile type of pet that can fit nearly all lifestyles. Some breeds prefer a more athletic lifestyle while others are ok with more of a low energy lifestyle. Since dogs come in many sizes, there may be an adoptable dog out there that can be compatible for you! 
                 </Col>
              <Col size="md-4">        
                 <li>
-                ♥ fluffy
+                ♥ Labrador Retriever
                 </li>
                 <li>
-                ♥ short tails
+                ♥ German Shepherd
                 </li>
                 <li>
-                ♥ whiskers
+                ♥ Golden Retriever
                 </li>
                 <li>
-                ♥ distinctive long ears
+                ♥ French Bulldog
                 </li>
                 </Col>
        </Row>
