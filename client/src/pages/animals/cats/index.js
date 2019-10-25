@@ -26,7 +26,7 @@ class cats extends Component {
 
     render() {
         return (
-<div>
+          <div>
             <Hero backgroundImage="https://i.imgur.com/w1pcCMG.jpg">
                 <h1>Cats </h1>
             </Hero>
@@ -86,10 +86,12 @@ class cats extends Component {
                     <Card 
                         key={pet.id}
                         name={pet.name}
-                        image={pet.image}
+                        thumbnail={pet.photos}
                         type={pet.type}
-                        location={pet.contact.address.state}
+                        city={pet.contact.address.city}
+                        state={pet.contact.address.state}
                         description={pet.description}
+                        href={pet.url}
                     />
                 ))}
             </Wrapper>
