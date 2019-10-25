@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-// import Pets from "./pages/Pets";
-import Nav from "./components/nav";
-//list in every page but login and app.js to prevent navbar from showing on the welcome page.
-
-// import Footer from "./components/footer"; won't be necessary in the app.
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-
-=======
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -22,7 +10,6 @@ import Backdrop from "./components/backdrop";
 // import API from "./utils/api";
 
 import Footer from "./components/footer";
->>>>>>> 4255899256cdb05c92a8582240059d2c011f444f
 
 
 import home from "./pages/home"
