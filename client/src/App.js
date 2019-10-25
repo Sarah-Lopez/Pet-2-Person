@@ -22,7 +22,7 @@ import horses from "./pages/animals/horses"
 import barnyard from "./pages/animals/barnyard"
 import scalesfinsother from "./pages/animals/scalesfinsother"
 import favorites from "./pages/favorites"
-// import login from "./pages/login"
+import login from "./pages/login"
 
 
 // function App() {

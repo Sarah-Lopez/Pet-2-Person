@@ -1,11 +1,9 @@
-.form {
-    margin: 20px;
+form.search {
+    overflow: auto;
+    margin-bottom: 10px;
   }
   
-  .form input {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 100%;
+  form.search button[type="submit"] {
+    float: right;
+    margin-top: 10px;
   }
-  
