@@ -26,31 +26,86 @@ class cats extends Component {
 
     render() {
         return (
-<div>
+          <div>
             <Hero backgroundImage="https://i.imgur.com/w1pcCMG.jpg">
                 <h1>Cats </h1>
             </Hero>
 
             <Container Style={{ marginTop: 30 }}>
-                <Row>
-                    <Col size="md-12">
-                        <h1>Welcome to Pet 2 Person</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                </Row>
+            <Row>
+            <Col size="md-8">
+            About
+            </Col>
+            <Col size="md-4">
+            Top cat breeds:
+            </Col>            
+        </Row>
+        <Row>
+                <Col size="md-8">            
+                There are about 38 different species of cats. Most domestic cats weigh about 6 to 20 pounds, making this little creature a good fit for any home size. Cats make good napping buddies as they sleep most of the day. Cats are most active from dawn to dusk, perfect match if you are a night owl. If you have a busy lifestyle, then a cat is low maintenance and does not need much to be happy!
+                </Col>
+             <Col size="md-4">        
+                <li>
+                ♥ Siamese
+                </li>
+                <li>
+                ♥ Persian
+                </li>
+                <li>
+                ♥ Maine Coon
+                </li>
+                <li>
+                ♥ Bengal
+                </li>
+                </Col>
+       </Row>
+
+<Row>
+<br />
+<br />
+</Row>
+
+       <Row>
+            <Col size="md-6">
+                <Form />
+            </Col>
+           <Col size="md-3" />
+            <Col size="md-3" />
+        </Row>
+
+        <Row >
+            <Col size ="md-4" />
+            <Col size="md-4">
+            <li>Content can go here</li>
+            </Col>
+            <Col size ="md-4" />
+
+        </Row>
+                <Wrapper>
+                  {this.state.pets.map(pet => (
+                    <Card 
+                        key={pet.id}
+                        name={pet.name}
+                        thumbnail={pet.photos}
+                        type={pet.type}
+                        city={pet.contact.address.city}
+                        state={pet.contact.address.state}
+                        description={pet.description}
+                        href={pet.url}
+                    />
+                ))}
+            </Wrapper>
             </Container>
         </div>        );
       }
 }
 
+
+
+
+
+
 export default cats;
+
+
+

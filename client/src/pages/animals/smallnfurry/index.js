@@ -10,26 +10,59 @@ class smallnfurry extends Component {
         return (
 <div>
             <Hero backgroundImage="https://i.imgur.com/HtsoNY8.jpg">
-                <h1>Smallnfurry</h1>
+                <h1>Small n' furry</h1>
             </Hero>
 
             <Container Style={{ marginTop: 30 }}>
-                <Row>
-                    <Col size="md-12">
-                        <h1>Welcome to Hero 2 Person</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                </Row>
+            <Row>
+            <Col size="md-8">
+            About
+            </Col>
+            <Col size="md-4">
+            Top types of small n furry:
+            </Col>            
+        </Row>
+        <Row>
+                <Col size="md-8">            
+                Small rodent animals have a long history of domestication and are known for being calm and tame. This is a good pet for children as they stay in an enclosure. Kids can learn responsibility by helping with their care such as feeding and cleaning. It is important to do research on rodent pets as some are social and some prefer to live alone. These little creatures are low maintenance and an ideal fit for a pet if you live in an apartment or small home. 
+                </Col>
+             <Col size="md-4">        
+                <li>
+                ♥ Hamster
+                </li>
+                <li>
+                ♥ Gerbil
+                </li>
+                <li>
+                ♥ Mouse
+                </li>
+                <li>
+                ♥ Rats
+                </li>
+                </Col>
+       </Row>
+
+<Row>
+<br />
+<br />
+</Row>
+
+       <Row>
+            <Col size="md-6">
+                <Form />
+            </Col>
+           <Col size="md-3" />
+            <Col size="md-3" />
+        </Row>
+
+        <Row >
+            <Col size ="md-4" />
+            <Col size="md-4">
+            <li>Content can go here</li>
+            </Col>
+            <Col size ="md-4" />
+
+        </Row>
             </Container>
         </div>        );
       }

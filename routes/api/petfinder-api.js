@@ -28,6 +28,7 @@ const tokenCall = async (params) => {
 };
 
 const apiCall = async (token, params) => {
+  // console.log(params)
   try {
     const response = await axios({
       url: URL,
@@ -41,6 +42,7 @@ const apiCall = async (token, params) => {
     return data
   } catch (error) {
     console.log("API Call Error")
+    // console.log(data);
     console.log(error);
   }
 };

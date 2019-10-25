@@ -3,8 +3,27 @@ import Container from "../../../components/container";
 import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
+import API from "../../../utils/api";
+import Card from "../../../components/Card/Card";
+import Wrapper from "../../../components/Wrapper";
+import Form from "../../../components/form";
 
 class scalesfinsother extends Component {
+
+    state = {
+        pets: []
+      };
+    
+      componentDidMount() {
+        this.loadPets();
+      }
+    
+      loadPets = () => {
+        API.getPet("cat")
+          .then(res => this.setState({ pets: res.data }))
+          .catch(err => console.log(err));
+      };
+
     render() {
         return (
 <div>
@@ -13,25 +32,67 @@ class scalesfinsother extends Component {
             </Hero>
 
             <Container Style={{ marginTop: 30 }}>
-                <Row>
-                    <Col size="md-12">
-                        <h1>Welcome to Hero 2 Person</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                    </p>
-                </Row>
-            </Container>
-        </div>        );
-      }
+           <Row>
+           <Col size="md-8">
+           About
+           </Col>
+           <Col size="md-4">
+           Top pets with scales and fins:
+           </Col>
+       </Row>
+       <Row>
+               <Col size="md-8">
+               Fish and reptiles are popular pets. Reptiles are the most ancient species on Earth. They eat a variety of food based on their type. This can include being herbivores, insectivores, or carnivores. It is important to do research on reptiles as pets. Some need a special diet and maintain a certain temperature to live. Fish can be calming to watch; they are easy to care for and are an affordable option for those looking for a pet with inexpensive care. Like other animals that live in enclosures, reptiles and fish can be easy to maintain and can allow children to help with their care. 
+               
+               </Col>
+            <Col size="md-4">
+               <li>
+               ♥ snakes
+               </li>
+               <li>
+               ♥ fish
+               </li>
+               <li>
+               ♥ lizards
+               </li>
+               <li>
+               ♥ turtles
+               </li>
+               </Col>
+      </Row>
+<Row>
+<br />
+<br />
+</Row>
+      <Row>
+           <Col size="md-6">
+               <Form />
+           </Col>
+          <Col size="md-3" />
+           <Col size="md-3" />
+       </Row>
+       <Row >
+           <Col size ="md-4" />
+           <Col size="md-4">
+           <li>Content can go here</li>
+           </Col>
+           <Col size ="md-4" />
+       </Row>
+               <Wrapper>
+                 {this.state.pets.map(pet => (
+                   <Card
+                       key={pet.id}
+                       name={pet.name}
+                       image={pet.image}
+                       type={pet.type}
+                       location={pet.contact.address.state}
+                       description={pet.description}
+                   />
+               ))}
+           </Wrapper>
+           </Container>
+       </div>        );
+     }
 }
 
 export default scalesfinsother;

@@ -3,38 +3,102 @@ import Container from "../../../components/container";
 import Row from "../../../components/row";
 import Col from "../../../components/col";
 import Hero from "../../../components/hero";
-// import Animals from "../../../components/petSearch"
+import API from "../../../utils/api";
+import Card from "../../../components/Card/Card";
+import Wrapper from "../../../components/Wrapper";
+import Form from "../../../components/form";
 
 class birds extends Component {
-    render() {
+    
+
+        state = {
+            pets: []
+          };
+        
+          componentDidMount() {
+            this.loadPets();
+          }
+        
+          loadPets = () => {
+            API.getPet("cat")
+              .then(res => this.setState({ pets: res.data }))
+              .catch(err => console.log(err));
+          };
+    
+          render() {
         return (
           <div>
-          <Hero backgroundImage="https://i.imgur.com/yZOQvaI.jpg">
+          <Hero backgroundImage="https://i.imgur.com/lDnJ4Pb.jpg">
               <h1>Birds </h1>
           </Hero>
 
           <Container Style={{ marginTop: 30 }}>
-              <Row>
-                  <Col size="md-12">
-                      <h1>Welcome to Hero 2 Person</h1>
-                  </Col>
-              </Row>
-              <Row>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                  </p>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                  </p>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur tempus sapien ac sagittis. Etiam efficitur urna non metus pretium vulputate. Quisque nunc nibh, finibus sit amet lacinia at, tempus in lorem. Cras laoreet elit a turpis mattis sagittis non vel lorem. Ut quis lacus eu arcu imperdiet accumsan. Phasellus et elit nec orci maximus tincidunt. Aliquam ut interdum risus, id vulputate nisl. Nunc pellentesque arcu felis, sed consequat sem vehicula at.
-                  </p>
-              </Row>
-          </Container>
-          {/* <Animals /> */}
-      </div>
-        );
+            <Row>
+            <Col size="md-8">
+            About
+            </Col>
+            <Col size="md-4">
+            Top pet bird types:
+            </Col>            
+        </Row>
+        <Row>
+                <Col size="md-8">     
+                Pet birds can live about 10-15 years. Many birds can sing, talk, and enjoy  human interaction. Birds are versatile and can live in small environments. These are social creatures that will be happy to keep you company and may even hold a conversation!
+                 </Col>
+             <Col size="md-4">        
+                <li>
+                ♥ Parakeet
+                </li>
+                <li>
+                ♥ Conure
+                </li>
+                <li>
+                ♥ Dove
+                </li>
+                <li>
+                ♥ Lovebird
+                </li>
+                </Col>
+       </Row>
+
+<Row>
+<br />
+<br />
+</Row>
+
+       <Row>
+            <Col size="md-6">
+                <Form />
+            </Col>
+           <Col size="md-3" />
+            <Col size="md-3" />
+        </Row>
+
+        <Row >
+            <Col size ="md-4" />
+            <Col size="md-4">
+            <li>Content can go here</li>
+            </Col>
+            <Col size ="md-4" />
+
+        </Row>
+                <Wrapper>
+                  {this.state.pets.map(pet => (
+                    <Card 
+                        key={pet.id}
+                        name={pet.name}
+                        image={pet.image}
+                        type={pet.type}
+                        location={pet.contact.address.state}
+                        description={pet.description}
+                    />
+                ))}
+            </Wrapper>
+            </Container>
+        </div>        );
       }
 }
+
+
 
 export default birds;
