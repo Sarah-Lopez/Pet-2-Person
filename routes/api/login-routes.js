@@ -6,8 +6,7 @@ const router = require("express").Router();
 module.exports = function (app) {
 
 
-  router.post(
-    '/login',
+  router.post('/login',
     function(req, res, next) {
       console.log('routes/login.js: ');
       console.log(req.body);

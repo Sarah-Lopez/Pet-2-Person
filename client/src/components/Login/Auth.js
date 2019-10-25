@@ -38,7 +38,7 @@ export default class Auth extends Component {
             console.log("Auth response", res);
         })
         .catch(error => {
-            console.log("Auth error", error);
+            console.log("Auth error", error.res);
         });
         event.preventDefault();
     }
