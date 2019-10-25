@@ -60,10 +60,10 @@ class Favorite extends Component {
                 <h1>Favorites</h1>
             </Hero>
   
-            <Container Style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30 }}>
              <Row>
              <Col size="md-8">
-             
+             Feature comming soon!
              </Col>
              <Col size="md-4">
              
@@ -80,7 +80,8 @@ class Favorite extends Component {
         </Row>
   
              </Container>
-         </div>        );
+         </div>       
+          );
        }
   }
   

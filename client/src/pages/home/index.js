@@ -115,7 +115,7 @@ class Pets extends Component {
 
           </Hero>
 
-<Container Style={{ marginTop: 30 }}>
+<Container style={{ marginTop: 30 }}>
     <Row>
         <Col size="md-12">
             <h1 class="h1">Pet 2 Person ♥ Mission Statement</h1>
