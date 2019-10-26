@@ -18,7 +18,7 @@ class barnyard extends Component {
       }
     
       loadPets = () => {
-        API.getPet("cat")
+        API.getPet("barnyard")
           .then(res => this.setState({ pets: res.data }))
           .catch(err => console.log(err));
       };
@@ -31,7 +31,7 @@ class barnyard extends Component {
               <h1>Barnyard </h1>
           </Hero>
 
-          <Container Style={{ marginTop: 30 }}>
+          <Container style={{ marginTop: 30 }}>
            <Row>
            <Col size="md-8">
            About
@@ -76,7 +76,7 @@ class barnyard extends Component {
                    key={pet.id}
                    name={pet.name}
                    thumbnail={pet.photos}
-                   type={pet.type}
+                   type={pet.species}
                    city={pet.contact.address.city}
                    state={pet.contact.address.state}
                    description={pet.description}

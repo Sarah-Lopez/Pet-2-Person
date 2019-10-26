@@ -28,6 +28,7 @@ class login extends Component {
 
     render() {
         return (
+
        <div>
       <Hero backgroundImage="https://i.imgur.com/xAydj73.jpg">
           <h1>Log in or Sign Up</h1>
@@ -56,6 +57,11 @@ class login extends Component {
         you back to the welcome page
         <Auth />
         <Log handleSuccessfulAuth={this.handleSuccessfulAuth} />    
+
+         <div>Feature comming soon!!
+             <Auth />
+            <Log handleSuccessfulAuth={this.handleSuccessfulAuth} />    
+
          </div>
 
        </Container>
