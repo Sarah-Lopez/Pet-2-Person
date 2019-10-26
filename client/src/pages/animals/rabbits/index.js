@@ -21,7 +21,7 @@ class rabbits extends Component {
       }
     
       loadPets = () => {
-        API.getPet("dog")
+        API.getPet("rabbit")
           .then(res => this.setState({ pets: res.data }))
           .catch(err => console.log(err));
       };
@@ -103,7 +103,7 @@ class rabbits extends Component {
                     // id={pet.id}
                     name={pet.name}
                     thumbnail={pet.photos}
-                    type={pet.type}
+                    type={pet.species}
                     city={pet.contact.address.city}
                     state={pet.contact.address.state}
                     description={pet.description}
