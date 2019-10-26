@@ -8,12 +8,29 @@ export default class Auth extends Component {
         this.state = {
             username: "",
             password: "",
-            password_confirmation: "",
+            // password_confirmation: "",
             authErrors: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount() {
+        fetch('/signup', {
+            credentials: 'include',
+            method: 'post',
+            body: JSON.stringify({
+                username: this.state.username,
+                password: this.state.password
+            })
+          })
+          .then( res => {
+            // Some stuff...
+          })
+          .catch(err => {
+            console.log("signup auth error", err);
+          });
     }
 
     handleChange(event) {
@@ -29,7 +46,7 @@ export default class Auth extends Component {
             user: {
                 username: this.state.username,
                 password: this.state.password,
-                password_confirmation: this.state.password_confirmation
+                // password_confirmation: this.state.password_confirmation
             }
         },
         {withCredentials: true}
@@ -38,7 +55,7 @@ export default class Auth extends Component {
             console.log("Auth response", res);
         })
         .catch(error => {
-            console.log("Auth error", error);
+            console.log("Auth error", error.res);
         });
         event.preventDefault();
     }
@@ -65,14 +82,14 @@ export default class Auth extends Component {
                       required
                     />
 
-                    <input 
+                    {/* <input 
                       type="password"
                       name="password_confirmation"
                       placeholder="Password Confirmation"
                       value={this.state.password_confirmation}
                       onChange={this.handleChange}
                       required
-                    />
+                    /> */}
 
                     <button type="submit">Sign Up</button>
                 </form>
