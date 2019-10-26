@@ -4,7 +4,7 @@ const db = require("../models");
 // This file empties the Pets collection and inserts the pets below
 
 module.exports = {
-  'url' : 'mongodb://localhost/petslist'
+  'url': 'mongodb://localhost/petslist'
 };
 
 mongoose.connect(
@@ -125,28 +125,28 @@ const userSeed = [
     username: "Sarah",
     password: "password",
     roles: [
-        { role: 'readwrite', db: 'userSeed' }
+      { role: 'readwrite', db: 'userSeed' }
     ]
   },
   {
     username: "Chaa'lissa",
     password: "password",
     roles: [
-        { role: 'readwrite', db: 'userSeed' }
+      { role: 'readwrite', db: 'userSeed' }
     ]
   },
   {
     username: "Marco",
     password: "password",
     roles: [
-        { role: 'readwrite', db: 'userSeed' }
+      { role: 'readwrite', db: 'userSeed' }
     ]
   },
   {
     username: "Nicole",
     password: "password",
     roles: [
-        { role: 'readwrite', db: 'userSeed' }
+      { role: 'readwrite', db: 'userSeed' }
     ]
   }
 
@@ -166,7 +166,7 @@ db.Pet
   });
 
 
-  db.User
+db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
