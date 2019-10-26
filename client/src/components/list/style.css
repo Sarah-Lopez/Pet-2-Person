@@ -10,17 +10,21 @@
   .PetRow > div:first-child {
     border: #5eb4c4e8 solid 4px;
     border-radius: 10px;
+    width: 50%;
+    
   }
   
   .PetRow img {
-    border-radius: 6px;
+    border-radius: 10px;
     margin-left: 15px;
   }
-  .dogImage {
+  .petImage {
+    padding: 40%;
+  }
+
+  .petImgDiv {
     border-radius: 6px;
     margin-left: 15px;
-    background-color: yellow;
-    padding: 8%;
     align-items: left;
   }
   
