@@ -75,7 +75,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/petslist"
+  process.env.MONGODB_URI || "mongodb://pet2pet-still-peak:pF**IBL1xOKiSx&IZcljT@ds139768.mlab.com:39768/heroku_qmhw2gzx"
 );
 
 

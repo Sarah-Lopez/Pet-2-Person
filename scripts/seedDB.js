@@ -3,6 +3,10 @@ const db = require("../models");
 
 // This file empties the Pets collection and inserts the pets below
 
+module.exports = {
+  'url' : 'mongodb://localhost/petslist'
+};
+
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/petslist"
