@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 // const bcrypt = require('bcrypt-nodejs');
 
 const userSchema = new Schema({
@@ -12,7 +12,7 @@ const User = mongoose.model("User", userSchema);
 
 module.exports = User;
 
-/*
+
 // generating a hash
 userSchema.methods.generateHash = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
@@ -24,8 +24,8 @@ userSchema.methods.validPassword = function(password) {
 };
 
 // create the model for users and expose it to our app
-module.exports = mongoose.model('User', userSchema);
-*/
+// module.exports = mongoose.model('User', userSchema);
+
 
 // database/models/user.js
 // Define schema methods

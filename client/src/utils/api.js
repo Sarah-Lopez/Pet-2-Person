@@ -29,6 +29,18 @@ export default {
     return axios.get("/api/petfinder");
   },
 
+  getUser: function () {
+    fetch('/signup', {
+      credentials: 'include'  
+    })
+    .then( res => {
+      // Some stuff...
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
 
   //Will push pets to favorites here.
   //post
