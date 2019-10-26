@@ -22,11 +22,11 @@ app.use(morgan('dev'));
 app.use(require('cookie-parser')());
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(
-    require('express-session')({ 
-        secret: 'keyboard cat', 
-        resave: false,
-        saveUninitialized: false 
-    })
+  require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+  })
 );
 // Passport Middleware
 app.use(passport.initialize());
@@ -51,6 +51,6 @@ mongoose.connect(
 
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

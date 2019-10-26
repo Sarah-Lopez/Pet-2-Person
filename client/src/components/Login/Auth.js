@@ -8,7 +8,6 @@ export default class Auth extends Component {
         this.state = {
             username: "",
             password: "",
-            // password_confirmation: "",
             authErrors: ""
         }
 
@@ -24,17 +23,16 @@ export default class Auth extends Component {
                 username: this.state.username,
                 password: this.state.password
             })
-          })
-          .then( res => {
-            // Some stuff...
-          })
-          .catch(err => {
-            console.log("signup auth error", err);
-          });
+        })
+            .then(res => {
+                // Some stuff...
+            })
+            .catch(err => {
+                console.log("signup auth error", err);
+            });
     }
 
     handleChange(event) {
-        // console.log("handle change", event);
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -46,17 +44,16 @@ export default class Auth extends Component {
             user: {
                 username: this.state.username,
                 password: this.state.password,
-                // password_confirmation: this.state.password_confirmation
             }
         },
-        {withCredentials: true}
+            { withCredentials: true }
         )
-        .then(res => {
-            console.log("Auth response", res);
-        })
-        .catch(error => {
-            console.log("Auth error", error.res);
-        });
+            .then(res => {
+                console.log("Auth response", res);
+            })
+            .catch(error => {
+                console.log("Auth error", error.res);
+            });
         event.preventDefault();
     }
 
@@ -64,33 +61,23 @@ export default class Auth extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input 
-                      type="text"
-                      name="username"
-                      placeholder="Username"
-                      value={this.state.username}
-                      onChange={this.handleChange}
-                      required
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        value={this.state.username}
+                        onChange={this.handleChange}
+                        required
                     />
 
-                    <input 
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      value={this.state.password}
-                      onChange={this.handleChange}
-                      required
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        required
                     />
-
-                    {/* <input 
-                      type="password"
-                      name="password_confirmation"
-                      placeholder="Password Confirmation"
-                      value={this.state.password_confirmation}
-                      onChange={this.handleChange}
-                      required
-                    /> */}
-
                     <button type="submit">Sign Up</button>
                 </form>
             </div>

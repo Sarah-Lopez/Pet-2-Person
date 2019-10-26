@@ -17,31 +17,31 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findBySpecies: function(req, res) {
+  findBySpecies: function (req, res) {
     db.Pet
       .findBySpecies(req.params.species)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findByBreed: function(req, res) {
+  findByBreed: function (req, res) {
     db.Pet
       .findByBreed(req.params.breed)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findBySize: function(req, res) {
+  findBySize: function (req, res) {
     db.Pet
       .findBySize(req.params.size)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findByAge: function(req, res) {
+  findByAge: function (req, res) {
     db.Pet
       .findByAge(req.params.age)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findByGender: function(req, res) {
+  findByGender: function (req, res) {
     db.Pet
       .findByGender(req.params.gender)
       .then(dbModel => res.json(dbModel))
