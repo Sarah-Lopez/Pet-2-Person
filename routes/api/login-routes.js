@@ -1,6 +1,6 @@
 
-const passport = require('passport');
-const db = require("../models");
+// const passport = require('passport');
+const db = require("../../models");
 const router = require("express").Router();
 
 module.exports = function (app) {
@@ -137,7 +137,7 @@ module.exports = function (app) {
 
   });
 
-  app.get('/verify', (req, res, next) => {
+  router.get('/verify', (req, res, next) => {
     // Get tokem
     const { query } = req;
     const { token } = query;
@@ -145,7 +145,7 @@ module.exports = function (app) {
 
     // Verify token is unique and it's not deleted.
 
-    UserSession.find({
+    db.UserSession.find({
         _id: token,
         isDeleted: false
     }, (err, sessions) => {
@@ -170,7 +170,35 @@ module.exports = function (app) {
     });
 });
 
+router.get('/logout', (req, res, next) => {
+  // Get tokem
+  const { query } = req;
+  const { token } = query;
+  // ?token=test
 
+  // Verify token is unique and it's not deleted.
+
+  db.UserSession.findOneAndUpdate({
+      _id: token,
+      isDeleted: false
+  }, {
+      $set: {isDeleted:true}
+  }, null, (err, sessions) => {
+      if (err) {
+          return res.send({
+              success: false,
+              message: 'Error: Server error'
+          });
+      
+      } else {
+          return res.send({
+              success: true,
+              message: 'Good'
+          });
+      }
+  });
+
+});
 
 
 

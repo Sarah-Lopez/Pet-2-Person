@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Log from "../../components/Login/index"
+// import Log from "../../components/Login/index"
 import Auth from "../../components/Login/Auth"
 import Row from "../../components/row";
 import Col from "../../components/col";
@@ -34,8 +34,8 @@ class login extends Component {
                         <Col size="md-3" />
                         <Col size="md-6">
                             <div>Feature comming soon!!
-                            <Auth />
-                                <Log handleSuccessfulAuth={this.handleSuccessfulAuth} />
+                            {/* <Auth /> */}
+                                {/* <Log handleSuccessfulAuth={this.handleSuccessfulAuth} /> */}
                             </div>
                         </Col>
                         <Col size="md-3" />
