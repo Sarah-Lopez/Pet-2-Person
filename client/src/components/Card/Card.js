@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import Thumbnail from "./Thumbnail";
+import Btn from "../favorites/button";
 
 function Card({thumbnail, name, type, city, state, description, href}) {
 
