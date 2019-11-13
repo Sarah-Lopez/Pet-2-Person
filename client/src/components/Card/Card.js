@@ -1,9 +1,58 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 import Thumbnail from "./Thumbnail";
 
 function Card({thumbnail, name, type, city, state, description, href}) {
-  // console.log(thumbnail);
+
+// class Card extends Component {
+//   // console.log(thumbnail);
+
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       thumbnail: '',
+//       name: '',
+//       type: '',
+//       city: '',
+//       state: '',
+//       description: '',
+//       href: ''
+//     };
+
+//     this.onThumbnailReceived = this.onThumbnailReceived.bind(this);
+//     this.onNameReceived = this.onNameReceived.bind(this);
+//   }
+
+//     componentDidMount() {
+
+//     }
+
+//     onThumbnailReceived(event) {
+//       this.setState({
+//         thumbnail: event.target.value,
+//       });
+//     }
+
+//     onNameReceived(event) {
+//       this.setState({
+//         name: event.target.value,
+//       });
+//     }
+
+
+
+//   render() {
+//     const {
+//       thumbnail,
+//       name,
+//       type,
+//       city,
+//       state,
+//       description,
+//       href,
+//     } = this.state;
+
   return (
     <div className="card">
       <div className="img-container">
@@ -34,5 +83,5 @@ function Card({thumbnail, name, type, city, state, description, href}) {
     </div>
   );
 }
-
+// }
 export default Card;
