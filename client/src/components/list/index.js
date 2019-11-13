@@ -61,8 +61,10 @@ class PetRow extends React.Component {
                 className="PetRow"
                 favornot={this.state.isFaved.value}
             >
-                <div>
-                    <img className="dogImage" alt= "dog"></img>
+                <div className="petImgDiv">
+                    <img className="petImage" alt="dog"></img>
+                </div>
+                <div className="petInfoDiv">
                     <h3 style={{ "marginTop": "15px" }}>{this.props.pet.name}</h3>
                     {/* Play with style of above line */}
                     <p>{this.props.pet.type}</p>
@@ -73,7 +75,6 @@ class PetRow extends React.Component {
                         // onClick={this.viewPet.bind(this)}
                         value="View"
                     />
-
                     {favBtn}
                 </div>
             </div>
@@ -81,22 +82,20 @@ class PetRow extends React.Component {
     }
 }
 
-
 export function Input({ children }) {
-  return (
-    <div className="input-group input-group-lg">
-      <input className="form-control" type="text" {...children} />
-    </div>
-  );
+    return (
+        <div className="input-group input-group-lg">
+            <input className="form-control" type="text" {...children} />
+        </div>
+    );
 }
 
-
 export function Button({ type = "default", className, children, onClick }) {
-  return (
-    <button onClick={onClick} className={["btn btn-lg", `btn-${type}`, className].join(" ")}>
-      {children}
-    </button>
-  );
+    return (
+        <button onClick={onClick} className={["btn btn-lg", `btn-${type}`, className].join(" ")}>
+            {children}
+        </button>
+    );
 }
 
 export { PetRow as default, myFavoritePets };
