@@ -31,7 +31,9 @@ class cats extends Component {
                 <h1>Cats </h1>
             </Hero>
 
-            <Container style={{ marginTop: 30 }}>
+            <Container style={{ marginTop: 30, background:"white", marginBottom:30 }}>
+            
+
             <Row>
             <Col size="md-8">
             About
@@ -59,7 +61,6 @@ class cats extends Component {
                 </li>
                 </Col>
        </Row>
-
 <Row>
 <br />
 <br />
@@ -72,6 +73,8 @@ class cats extends Component {
            <Col size="md-3" />
             <Col size="md-3" />
         </Row>
+       {/* </Container>
+  <Container> */}
                 <Wrapper>
                   {this.state.pets.map(pet => (
                     <Card 
@@ -86,7 +89,7 @@ class cats extends Component {
                     />
                 ))}
             </Wrapper>
-            </Container>
+    </Container>
         </div>        );
       }
 }
