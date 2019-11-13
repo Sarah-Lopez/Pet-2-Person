@@ -11,15 +11,14 @@ const tokenCall = async (params) => {
     const res = await axios({
       url: queryURL,
       data: {
-          grant_type: "client_credentials",
-          client_id: key,
-          client_secret: secret
+        grant_type: "client_credentials",
+        client_id: key,
+        client_secret: secret
       },
       method: 'post'
     });
     token1 = res.data.access_token;
     console.log("Token 200 Success!")
-    // console.log(token1);
     return apiCall(token1, params)
   } catch (error) {
     console.log("Token Error")
@@ -28,13 +27,12 @@ const tokenCall = async (params) => {
 };
 
 const apiCall = async (token, params) => {
-  // console.log(params)
   try {
     const response = await axios({
       url: URL,
       method: 'get',
       params: params,
-      headers: {"Authorization" : 'Bearer ' + token}
+      headers: { "Authorization": 'Bearer ' + token }
     });
     const data = response.data.animals;
     console.log("API Call: It worked......I guess")
@@ -42,13 +40,12 @@ const apiCall = async (token, params) => {
     return data
   } catch (error) {
     console.log("API Call Error")
-    // console.log(data);
     console.log(error);
   }
 };
 
 
-  module.exports = {
-    apiCall: apiCall,
-    tokenCall: tokenCall
-  }
+module.exports = {
+  apiCall: apiCall,
+  tokenCall: tokenCall
+}

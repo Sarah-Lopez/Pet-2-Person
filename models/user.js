@@ -14,22 +14,19 @@ module.exports = User;
 
 
 // generating a hash
-userSchema.methods.generateHash = function(password) {
+userSchema.methods.generateHash = function (password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 
 // checking if password is valid
-userSchema.methods.validPassword = function(password) {
+userSchema.methods.validPassword = function (password) {
   return bcrypt.compareSync(password, this.local.password);
 };
 
-// create the model for users and expose it to our app
-// module.exports = mongoose.model('User', userSchema);
 
+//       The below code is for password hashing
 
-// database/models/user.js
-// Define schema methods
-// ...
+// // Define schema methods
 // userSchema.methods = {
 //   checkPassword: function (inputPassword) {
 //   return bcrypt.compareSync(inputPassword, this.password)
@@ -39,9 +36,7 @@ userSchema.methods.validPassword = function(password) {
 //   }
 // }
 
-
-// database/models/user.js
-// Define pre-hooks for the save method
+// // Define pre-hooks for the save method
 // userSchema.pre('save', function (next) {
 //   if (!this.password) {
 //     console.log('models/user.js =======NO PASSWORD PROVIDED=======')
