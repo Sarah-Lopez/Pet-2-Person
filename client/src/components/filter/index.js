@@ -40,3 +40,48 @@
 //     );
 //   }
 // }
+
+import React, { Component } from 'react'
+
+class filterForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      breedFilter: ""
+    }
+  }
+  
+  handleChange = (event) => {
+    this.setState({
+      breedFilter: event.target.value
+    })
+    this.props.onChange(event.target.value)
+  }
+  
+  render() {
+    return (
+      <div>
+        <label htmlFor="filter">Filter by Breed:<br /> </label> {/*put break after colon.*/}
+        <input type="text" id="filter" 
+          value={this.state.breedFilter} 
+          onChange={this.handleChange}/>
+      </div>
+      )
+  }
+}
+
+export default filterForm
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -146,5 +146,12 @@ router.route("/blah").get(
 // Routes
 // module.exports = function(app) {
 
+router.route("/favorites").put(
+  (req, res)=>{
+  const params = req.query
+  res.json()
+  }
+);
+
 
 module.exports = router;
