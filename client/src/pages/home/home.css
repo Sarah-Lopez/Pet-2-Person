@@ -159,13 +159,13 @@ left: 0;
 z-index: -1;
 }
 
-.btn-white::after {
+/* .btn-white::after {
 background-color: 
-}
+} */
 
-.btn:hover::after {
+/* .btn:hover::after {
 
-}
+} */
 
 
 .container {
