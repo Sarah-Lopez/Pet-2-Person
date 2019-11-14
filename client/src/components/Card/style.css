@@ -11,7 +11,7 @@
   
   .card > .img-container {
     height: 60%;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-align: center;
     background:rgb(196, 237, 245);
   }
@@ -20,9 +20,11 @@
   }
   
   .card > .content {
-    padding-left: 1rem;
+    /* padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 15px;
+    font-size: 15px; */
+    color: transparent;
+    /* background-color: transparent; */
   }
   
   .card > .content > ul {
@@ -39,5 +41,16 @@
     background-position: center;
     width: 100%;
     padding-top: 100%;
+  }
+
+  .card >.img-container:hover {
+    overflow: hidden;
+  }
+
+  .card > .content:hover {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 15px;
+    color: black;
   }
   

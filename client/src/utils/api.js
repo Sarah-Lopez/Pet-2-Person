@@ -2,43 +2,40 @@ import axios from "axios";
 
 export default {
   // Gets all pets
-  getPets: function() {
+  getPets: function () {
     return axios.get("/api/pets");
   },
   // Gets the pet with the given id
-  getPet: function(species) {
+  getPet: function (species) {
     return axios.get("/api/pets/" + species);
   },
   // Deletes the pet with the given id
-  deletePet: function(id) {
+  deletePet: function (id) {
     return axios.delete("/api/pets/" + id);
   },
   // Saves a pet to the database
-  savePet: function(petData) {
+  savePet: function (petData) {
     return axios.post("/api/pets", petData);
   },
 
-  // saveUser: function(userData) {
-  //   return axios.post("/signup", userData);
-  // },
-  getSearchPet: function(type, query) {
-     return axios.get("/api/pets/" + type, { params: query });
+  getSearchPet: function (type, query) {
+    return axios.get("/api/pets/" + type, { params: query });
   },
-  
-  getPetfinderResults: function(query) {
+
+  getPetfinderResults: function (query) {
     return axios.get("/api/petfinder");
   },
 
   getUser: function () {
     fetch('/signup', {
-      credentials: 'include'  
+      credentials: 'include'
     })
-    .then( res => {
-      // Some stuff...
-    })
-    .catch(err => {
-      console.log(err);
-    });
+      .then(res => {
+        // Some stuff...
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
 

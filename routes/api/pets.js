@@ -29,7 +29,7 @@ router
 
   .post(petsController.findAll)
 
-  .get(findBySpecies/Breed)
+  .get(findBySpecies / Breed)
 
 module.exports = router;
 
