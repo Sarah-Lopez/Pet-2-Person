@@ -1,5 +1,6 @@
 import React from 'react';
 import './sideDrawer.css';
+import Container from "../container";
 
 const SideDrawer = props => {
     let drawerClasses = 'side-drawer';
@@ -7,11 +8,12 @@ const SideDrawer = props => {
         drawerClasses = 'side-drawer open';
     }
     return (
-    <nav className={drawerClasses}>
+        <nav className={drawerClasses}>
+            <Container style={{ paddingTop: 100, background:"white", marginBottom:0 }}> 
         <ul>
             {/* <li>
                 <a href="/">
-                    Pet 2 Person
+                Pet 2 Person
                 </a>
             </li> */}
             <li>    
@@ -45,6 +47,7 @@ const SideDrawer = props => {
                 <a href="/login">Login</a>
             </li>
         </ul>
+        </Container>
     </nav>);
 };
 
