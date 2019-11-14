@@ -53,8 +53,7 @@ class dogs extends Component {
               <h1>Dogs </h1>
           </Hero>
 
-          <Container style={{ marginTop: 30 }}>
-          <Row>
+          <Container style={{ marginTop: 30, background:"white", marginBottom:30 }}>          <Row>
             <Col size="md-8">
             About
             </Col>

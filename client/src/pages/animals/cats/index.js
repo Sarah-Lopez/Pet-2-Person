@@ -19,6 +19,12 @@ class cats extends Component {
     this.loadPets();
   }
 
+
+            <Container style={{ marginTop: 30, background:"white", marginBottom:30 }}>
+            
+
+            <Row>
+
   loadPets = () => {
     API.getPet("cat")
       .then(res => this.setState({ pets: res.data }))
@@ -34,6 +40,7 @@ class cats extends Component {
 
         <Container style={{ marginTop: 30 }}>
           <Row>
+
             <Col size="md-8">
               About
             </Col>
@@ -58,6 +65,14 @@ class cats extends Component {
               <li>
                 ♥ Bengal
                 </li>
+
+                </Col>
+       </Row>
+<Row>
+<br />
+<br />
+</Row>
+
             </Col>
           </Row>
 
@@ -65,12 +80,35 @@ class cats extends Component {
             <br />
             <br />
           </Row>
+
 
           <Row>
             <Col size="md-6">
               <Form />
             </Col>
             <Col size="md-3" />
+
+        </Row>
+       {/* </Container>
+  <Container> */}
+                <Wrapper>
+                  {this.state.pets.map(pet => (
+                    <Card 
+                        key={pet.id}
+                        name={pet.name}
+                        thumbnail={pet.photos}
+                        type={pet.type}
+                        city={pet.contact.address.city}
+                        state={pet.contact.address.state}
+                        description={pet.description}
+                        href={pet.url}
+                    />
+                ))}
+            </Wrapper>
+    </Container>
+        </div>        );
+      }
+
             <Col size="md-3" />
           </Row>
           <FilterForm />
@@ -91,6 +129,7 @@ class cats extends Component {
         </Container>
       </div>);
   }
+
 }
 
 export default cats;

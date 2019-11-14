@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background:#eae9e9;
+    background:#FEDCD2;
     height: 65px;
     z-index: 500;
 }
@@ -28,12 +28,12 @@
 }
 
 .taskbar-nav-items a {
-    color: black;
+    color: #DF744A;
     font-family: 'Nunito', sans-serif;
 }
 
  .taskbar-logo a {
-     color: #420000;
+     color: #DF744A;
      text-decoration: none;
      font-size:1.5rem;
      font-family: 'Nunito', sans-serif;
@@ -49,7 +49,7 @@
 
 .taskbar-nav-items a:hover,
 .taskbar-nav-items a:active {
-    color: #32dbc6;
+    color: #DCB239;
 }
 
 
