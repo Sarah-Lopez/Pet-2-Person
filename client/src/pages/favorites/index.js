@@ -10,51 +10,52 @@ import PetRow, { myFavoritePets } from "../../components/list/index";
 // import Wrapper from "../../../components/Wrapper";
 // import Form from "../../../components/form";
 
-// *************************** Consult Chaa'llisa on this page***********************************
-
 class Favorite extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {data: {}};
+    
   }
 
-  componentDidMount() {
-    if (myFavoritePets.length > 0) {
-      const petRows = [];
-      const data = [{
-        name: "Walter White",
-        type: "Dog",
-        location: "Albuquerque, NM",
-        description: "He is the danger. Usually very mild-mannered, but too smart for his own good.",
-        id: 1
-      },
-      {
-        name: "Bacon",
-        description: "A really crispy purr machine. This guy needs a home that cooks bacon frequently, as he has developed a taste for it that we can no longer accommodate. Not good with kids.",
-        type: "Cat",
-        location: "Two Egg, FL",
-        id: 2
-      }]
-      for (var i = 0; i < data.length; i++) {
-        // fetch(myFavoritePets[i])
-        // .then(res => res.json())
-        // .then(data => {
-        const petRow = (
-          <PetRow
-            key={
-              data.id
-            }
-            pet={data[i]}
-            favornot
-          />
-        );
-        petRows.push(petRow);
-        this.setState({ rows: petRows });
-      }
-    }
-  }
+//   componentDidMount() {
+//     if (myFavoritePets.length > 0) {
+//       const petRows = [];
+//     //   const data = [{
+
+
+        
+//     //   }]
+//       for (var i = 0; i < data.length; i++) {
+//         fetch(myFavoritePets[i])
+//         .then(res => res.json())
+//         .then(data => {
+//         const petRow = (
+//           <PetRow
+//             key={
+//               data.id
+//             }
+//             pet={data[i]}
+//             favornot
+//           />
+//         );
+//         petRows.push(petRow);
+//         this.setState({ rows: petRows });
+//       })
+//     }
+//   }
+//   }
 
   render() {
+//     if (!data) {
+//       return (
+//         <div>No pets favorited!</div>
+//       )
+//     }
+//     if (favorite = true) {
+//       return (
+//         "Here is where your favorite pets go!"
+//       )
+//     }
     return (
       <div>
         <Hero backgroundImage="https://i.imgur.com/aHowLUJ.jpg">
@@ -89,8 +90,8 @@ class Favorite extends Component {
 
         </Container>
       </div>
-    );
-  }
+    )
+  };
 }
 
 export default Favorite;
