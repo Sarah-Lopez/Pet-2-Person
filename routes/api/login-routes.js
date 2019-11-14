@@ -11,10 +11,18 @@ module.exports = function (app) {
 
   router.post("/signup", (req, res, next) => {
     // console.log(req.body)
-    const { body } = req;
+    // const { body } = req;
+    // const {
+    //   username,
+    //   password
+    // } = body;
+
+    const body = req.body;
     const {
-      username,
       password
+    } = body;
+    let {
+      username
     } = body;
 
     if (!username) {
@@ -37,16 +45,16 @@ module.exports = function (app) {
       username: username
     }, (err, previousUsers) => {
       if (err) {
-        return res.end({
-          success: false,
+        return res.status(500).send({
           message: 'Error: Server error'
         });
-      } else if (previousUsers.length > 0) {
-        return res.send({
-          success: false,
+      // } else if (previousUsers.length > 0) {
+      } else if (previousUsers.length !=0) {
+        return res.status(200).send({
           message: 'Error: Username cannot be used.'
         });
       }
+      else {
       const newUser = new User();
 
       newUser.username = username;
@@ -63,7 +71,7 @@ module.exports = function (app) {
           message: 'Signed Up'
         });
       });
-
+    }
     });
 
   });

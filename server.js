@@ -32,9 +32,9 @@ app.use(
   })
 );
 // Passport Middleware
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(flash());
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(flash());
 
 
 // Define middleware here
@@ -49,11 +49,11 @@ app.use(routes);
 // app.use(login);
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://pet2pet-still-peak:pF**IBL1xOKiSx&IZcljT@ds139768.mlab.com:39768/heroku_qmhw2gzx"
-);
-// mongoose.connect(config.db_dev);
-// mongoose.Promise = global.Promise;
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://pet2pet-still-peak:pF**IBL1xOKiSx&IZcljT@ds139768.mlab.com:39768/heroku_qmhw2gzx"
+// );
+mongoose.connect(config.db_dev);
+mongoose.Promise = global.Promise;
 
 
 // Start the API server

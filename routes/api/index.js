@@ -5,6 +5,6 @@ const loginRoutes = require("./login-routes");
 
 // Pet routes
 router.use("/pets", petRoutes);
-router.use("/account/user", loginRoutes)
+router.use("/account", loginRoutes)
 
 module.exports = router;

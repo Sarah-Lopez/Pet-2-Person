@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {getFromStorage, setInStorage} from "../../utils/storage"
-import axios from "axios";
+import 'whatwg-fetch';
+// import axios from "axios";
 
 export default class Auth extends Component {
     constructor(props) {
@@ -89,7 +90,7 @@ export default class Auth extends Component {
           isLoading: true,
         })
         //Post req to backend
-        fetch('http://localhost:3001/api/account/user/signup', {
+        fetch('http://localhost:3001/api/account/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -127,7 +128,7 @@ export default class Auth extends Component {
           isLoading: true,
         })
         //Post req to backend
-        fetch('/api/account/user/signin', {
+        fetch('http://localhost:3001/api/account/signin', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -165,7 +166,7 @@ export default class Auth extends Component {
         if (obj && obj.token) {
           const { token } = obj;
           // Verify token
-          fetch('/api/account/user/logout?token=' + token)
+          fetch('http://localhost:3001/api/account/logout?token=' + token)
             .then(res => res.json())
             .then(json => {
               if(json.sucess) {
