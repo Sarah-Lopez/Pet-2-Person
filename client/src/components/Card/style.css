@@ -12,6 +12,7 @@
   .card > .img-container {
     height: 60%;
     overflow: hidden;
+    background-repeat: no-repeat;
     text-align: center;
     background:rgb(196, 237, 245);
   }
@@ -23,6 +24,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 15px;
+    color: black;
+    /* background-color: transparent; */
   }
   
   .card > .content > ul {
@@ -40,4 +43,16 @@
     width: 100%;
     padding-top: 100%;
   }
+
+  /* .card >.img-container:hover {
+    overflow: hidden;
+  }
+
+  .card > .content:hover {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 15px;
+    color: black;
+    background-color: #fff;
+  } */
   

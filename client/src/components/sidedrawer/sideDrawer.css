@@ -1,6 +1,9 @@
 .side-drawer {
     height:100%;
-    background:white;
+    /* background:#DCB239;
+    background:#8fd8d2;
+    background:#DF744A; */
+    background:#FEDCD2;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position:fixed;
     top: 0;
@@ -29,7 +32,7 @@
 }
 
 .side-drawer a {
-    color: black;
+    color: #DF744A;
     text-decoration: none;
     font-size: 1.2rem;
 
@@ -37,10 +40,16 @@
 
 .side-drawer a:hover,
 .side-drawer a:active{
-    color:#32dbc6;
+    color:#DCB239;
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
+    .side-drawer{
+        display: none;
+    }
+} */
+
+@media (min-width: 800px) {
     .side-drawer{
         display: none;
     }

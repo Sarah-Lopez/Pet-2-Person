@@ -82,7 +82,6 @@ class PetRow extends React.Component {
     }
 }
 
-
 export function Input({ children }) {
     return (
         <div className="input-group input-group-lg">
@@ -90,7 +89,6 @@ export function Input({ children }) {
         </div>
     );
 }
-
 
 export function Button({ type = "default", className, children, onClick }) {
     return (
