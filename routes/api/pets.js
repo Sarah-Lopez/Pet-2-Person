@@ -27,7 +27,7 @@ router
 
 
 
-  // .post(petsController.)
+  .post(petsController.findAll)
 
   .get(findBySpecies/Breed)
 

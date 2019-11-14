@@ -1,0 +1,46 @@
+.button {
+    width: 30%;
+    margin-left: 17%;
+    margin-right: 5%;
+    margin-bottom:
+}
+
+
+  .favBtn {
+    background-color: #d84444e8;
+    display: inline-block;
+    height: 15px;
+    margin: 10px 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 15px;
+  }
+  
+  /* .toggled.heart,
+  .toggled.heart:before,
+  .toggled.heart:after {
+    background-color: #d84444e8;
+  } */
+  
+  /* .heart:before,
+  .heart:after {
+    content: "";
+    background-color: #5eb4c4e8;
+    border-radius: 50%;
+    height: 15px;
+    position: absolute;
+    width: 15px;
+  } */
+  
+  /* .heart:before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 10px;
+    top: 0;
+  }
+   */
