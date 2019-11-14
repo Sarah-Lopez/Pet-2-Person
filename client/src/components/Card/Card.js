@@ -79,6 +79,7 @@ function Card({thumbnail, name, type, city, state, description, href}) {
             <strong>Description:</strong> {description}
             <a rel="noreferrer noopener" target="_blank" href={href}>...Read More!</a>
           </li>
+          <li><Btn /></li>
         </ul>
       </div>
     </div>
